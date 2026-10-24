@@ -1,0 +1,6 @@
+variant,model,n_features,auc,auc_fold_sd,budget_vup_coverage,recall_at_vup_coverage,precision_at_vup_coverage,budget_poverty_rate,recall_at_poverty_rate,precision_at_poverty_rate
+full,logit,77.0,0.8561,0.0093,0.1154,0.348,0.7053,0.2339,0.601,0.6011
+full,gbm,77.0,0.8489,0.0092,0.1154,0.3407,0.6906,0.2339,0.5886,0.5888
+no_program,logit,74.0,0.8562,0.0099,0.1154,0.3485,0.7064,0.2339,0.5985,0.5987
+no_program,gbm,74.0,0.8479,0.0102,0.1154,0.3383,0.6858,0.2339,0.5899,0.59
+current,VUP as reported,,,,0.1154,0.159,0.3221,,,

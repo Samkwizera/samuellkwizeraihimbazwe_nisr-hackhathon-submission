@@ -1,0 +1,8 @@
+component,sample_hh,survey_hh,ci_low,ci_high,survey_persons,admin,survey_over_admin,ratio_ci_low,ratio_ci_high
+Direct Support,437.0,88792.23,80270.769,97313.691,89238.052,117484.0,0.756,0.683,0.828
+Nutrition-Sensitive DS,558.0,109043.478,99650.207,118436.748,109604.655,161807.0,0.674,0.616,0.732
+Classic Public Works,389.0,79729.728,71041.77,88417.685,79729.728,113757.0,0.701,0.625,0.777
+Expanded Public Works,334.0,67808.877,59862.847,75754.907,67993.153,91188.0,0.744,0.656,0.831
+Financial Services (loan approved),325.0,64664.57,57183.81,72145.329,64664.57,56448.0,1.146,1.013,1.278
+Sum of 5 components (household-component pairs),,410038.882,,,,540684.0,0.758,,
+Any of the 5 components (unique households),1888.0,379801.065,361938.21,397663.92,,,,,

@@ -1,0 +1,8 @@
+budget,rule,selected_hh,poor_reached,exclusion_error,exclusion_error_lo,exclusion_error_hi,inclusion_error,inclusion_error_lo,inclusion_error_hi,extreme_poor_reached_pct
+survey,current,379801.06,122348.94,84.1,82.87,85.34,67.79,65.49,70.08,18.18
+survey,model_national,379644.32,268194.84,65.15,63.45,66.85,29.36,27.08,31.63,60.0
+survey,model_same_quota,376346.74,237245.83,69.17,67.53,70.81,36.96,34.52,39.4,49.96
+survey,model_poor_quota,376779.02,260422.22,66.16,64.43,67.89,30.88,28.57,33.2,56.72
+admin,model_national,500800.45,334722.54,56.51,54.76,58.25,33.16,31.15,35.18,67.87
+admin,model_same_quota,497523.73,298229.14,61.25,59.52,62.98,40.06,37.86,42.26,57.99
+admin,model_poor_quota,497816.43,325616.69,57.69,55.91,59.47,34.59,32.51,36.67,67.66

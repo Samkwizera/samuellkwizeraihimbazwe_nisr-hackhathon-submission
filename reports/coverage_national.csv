@@ -1,0 +1,7 @@
+component,coverage,coverage_lo,coverage_hi,poor_coverage,poor_coverage_lo,poor_coverage_hi,extreme_poor_coverage,extreme_poor_coverage_lo,extreme_poor_coverage_hi,exclusion_error,exclusion_error_lo,exclusion_error_hi,inclusion_error,inclusion_error_lo,inclusion_error_hi,recipients,poor_uncovered,sample_hh,sample_poor,sample_recipients
+Any VUP (5 components),11.54,11.0,12.09,15.9,14.66,17.13,18.18,15.05,21.31,84.1,82.87,85.34,67.79,65.49,70.08,379801.06,647241.58,15054,3581,1888
+Direct Support,2.7,2.44,2.96,3.66,3.06,4.26,3.53,2.04,5.01,96.34,95.74,96.94,68.25,63.82,72.68,88792.23,741400.5,15054,3581,437
+Nutrition-Sensitive DS,3.31,3.03,3.6,4.53,3.86,5.19,4.92,3.33,6.51,95.47,94.81,96.14,68.05,63.99,72.12,109043.48,734756.35,15054,3581,558
+Classic Public Works,2.42,2.16,2.69,4.37,3.66,5.08,6.54,4.53,8.56,95.63,94.92,96.34,57.86,52.74,62.98,79729.73,735991.39,15054,3581,389
+Expanded Public Works,2.06,1.82,2.3,3.17,2.56,3.77,3.5,2.05,4.95,96.83,96.23,97.44,64.06,58.51,69.6,67808.88,745217.12,15054,3581,334
+Financial Services,1.97,1.74,2.19,1.67,1.25,2.09,2.06,0.98,3.14,98.33,97.91,98.75,80.11,75.55,84.67,64664.57,756730.95,15054,3581,325

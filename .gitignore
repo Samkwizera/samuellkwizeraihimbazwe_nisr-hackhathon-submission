@@ -1,0 +1,19 @@
+# Microdata must never be pushed to a public repo
+data/
+*.dta
+*.parquet
+*.csv.gz
+*.zip
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# NISR reference documents (link to NISR instead)
+*.pdf
+
+# Local Claude Code settings
+.claude/

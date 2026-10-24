@@ -1,0 +1,839 @@
+file,variable,label
+CS_EICV7_poverty_file.dta,hhid,Household Identification
+CS_EICV7_poverty_file.dta,clust,Clust
+CS_EICV7_poverty_file.dta,province,Province
+CS_EICV7_poverty_file.dta,district,District
+CS_EICV7_poverty_file.dta,ur,Area of Residence
+CS_EICV7_poverty_file.dta,ae,hhsize A/E
+CS_EICV7_poverty_file.dta,member,hhsize
+CS_EICV7_poverty_file.dta,Food_at_school,Education Expenses/Food at School
+CS_EICV7_poverty_file.dta,exp1,Total Education Expenditures
+CS_EICV7_poverty_file.dta,exp2,Imputed Rents
+CS_EICV7_poverty_file.dta,exp3,Actual Rents
+CS_EICV7_poverty_file.dta,exp4,Water expenses
+CS_EICV7_poverty_file.dta,exp5,Electricity expenses
+CS_EICV7_poverty_file.dta,exp6,Annual Non food Expenditures
+CS_EICV7_poverty_file.dta,exp7,Monthly Non food Expenditures
+CS_EICV7_poverty_file.dta,exp8,Frequent Non Food Expenditures
+CS_EICV7_poverty_file.dta,exp9,Food Consumption/Home
+CS_EICV7_poverty_file.dta,exp10,Food outside Home Expenditures
+CS_EICV7_poverty_file.dta,exp11,Use values of durable goods
+CS_EICV7_poverty_file.dta,hh_index,Household Index
+CS_EICV7_poverty_file.dta,weight,Household Weight
+CS_EICV7_poverty_file.dta,pop_wt,Population Weight
+CS_EICV7_poverty_file.dta,sol_jan,Aggregate Consumption/ae in Jan 2024 Prices
+CS_EICV7_poverty_file.dta,quintile,Quintiles of real consumption per ae
+CS_EICV7_poverty_file.dta,food,Total food expenditures
+CS_EICV7_poverty_file.dta,cons1,Aggregate Consumption
+CS_EICV7_poverty_file.dta,cons1ae,Aggregate Consumption/ae
+CS_EICV7_poverty_file.dta,pov_jan,Total Poverty Headcount Ratio
+CS_EICV7_poverty_file.dta,poverty,Welfare Categories
+CS_EICV7_poverty_file.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_EICV7_poverty_file.dta,Poverty_line,Value of Povertyline in Jan/2024 Prices
+CS_EICV7_poverty_file.dta,Extreme_line,Value of Food Povertyline in Jan/2024 Prices
+CS_S01_S5_S7_Household.dta,hhid,Household Identification
+CS_S01_S5_S7_Household.dta,clust,Clust
+CS_S01_S5_S7_Household.dta,province,Province
+CS_S01_S5_S7_Household.dta,district,District
+CS_S01_S5_S7_Household.dta,ur,Residence area
+CS_S01_S5_S7_Household.dta,s5aq1,Type of habitat
+CS_S01_S5_S7_Household.dta,s5aq2,Type of dwelling
+CS_S01_S5_S7_Household.dta,s5aq3,Number of  rooms does your household have for sleeping
+CS_S01_S5_S7_Household.dta,s5aq4y,Duration household inhabited dwelling (years)
+CS_S01_S5_S7_Household.dta,s5aq4m,Duration household inhabited dwelling (months)
+CS_S01_S5_S7_Household.dta,s5aq5,Household lived in other dwellings before occupying your current house
+CS_S01_S5_S7_Household.dta,s5aq6,Main reason for moving to current dwelling
+CS_S01_S5_S7_Household.dta,s5aq7,Owner of the dwelling
+CS_S01_S5_S7_Household.dta,s5aq8,Current occupancy status
+CS_S01_S5_S7_Household.dta,s5bq1,The current value of your dwelling if you were to sell it
+CS_S01_S5_S7_Household.dta,s5bq2a,Estimated rent for dwelling
+CS_S01_S5_S7_Household.dta,s5bq2b,Time period
+CS_S01_S5_S7_Household.dta,s5bq3a,Actual amount of rent paid in cash
+CS_S01_S5_S7_Household.dta,s5bq3b,Time period
+CS_S01_S5_S7_Household.dta,s5bq4,Household provide service/payments in kind
+CS_S01_S5_S7_Household.dta,s5bq5a,Amount of services/payment in kind
+CS_S01_S5_S7_Household.dta,s5bq5b,Time period
+CS_S01_S5_S7_Household.dta,s5bq6,Do you own a residential house in this village or elsewhere?
+CS_S01_S5_S7_Household.dta,s5bq7,In which year did you acquire that house?
+CS_S01_S5_S7_Household.dta,s5bq8,What was the value of that house when you acquired it?
+CS_S01_S5_S7_Household.dta,s5bq9,How did you acquire that house?
+CS_S01_S5_S7_Household.dta,s5cq1,Main source of water used for your household?
+CS_S01_S5_S7_Household.dta,s5cq2a,Distance in meters between your dwelling and this source?
+CS_S01_S5_S7_Household.dta,s5cq2b,"Time in minutes it take to go there, to get water and come back?"
+CS_S01_S5_S7_Household.dta,s5cq3,Main Source of drinking water for members of your household?
+CS_S01_S5_S7_Household.dta,s5cq4b,"Time in minutes it take to go there, to get water and come back"
+CS_S01_S5_S7_Household.dta,s5cq5,Is this source the nearest to you dwelling?
+CS_S01_S5_S7_Household.dta,s5cq6a,Unused nearest drinking water source to your dwelling?
+CS_S01_S5_S7_Household.dta,s5cq6b,Distance in meters between your dwelling and unused nearest drinking water sourc
+CS_S01_S5_S7_Household.dta,s5cq7,Main reason preventing your HH to use the nearest drinking water source?
+CS_S01_S5_S7_Household.dta,s5cq8,In the last 4 weeks has there been anytime when your hh deed not have sufficient
+CS_S01_S5_S7_Household.dta,s5cq9a,Amount of last water bill from WASAC or other distributors (month)
+CS_S01_S5_S7_Household.dta,s5cq9b,Amount of last water bill from WASAC or other distributors-amount
+CS_S01_S5_S7_Household.dta,s5cq10,Did you buy water from a private vendor/neighbour during the last 7 days
+CS_S01_S5_S7_Household.dta,s5cq11,Amount paid to private water vendor last 7 days
+CS_S01_S5_S7_Household.dta,s5cq12,Amount contribute to maintain the water source during the last month
+CS_S01_S5_S7_Household.dta,s5cq13,Household manage the rainwater
+CS_S01_S5_S7_Household.dta,s5cq14,Is this HH connected to the grid (electricity from the grid)?
+CS_S01_S5_S7_Household.dta,s5cq15,Main Reason your household is not connected to the electricity grid
+CS_S01_S5_S7_Household.dta,s5cq16,Main source energy for home lighting
+CS_S01_S5_S7_Household.dta,s5cq17,Main Source of electricity that you mostly used in your household
+CS_S01_S5_S7_Household.dta,s5cq18,Main reason preventing your household to use electricity for lighting
+CS_S01_S5_S7_Household.dta,s5cq19,Appliances get damaged/electrical system (voltage surges)
+CS_S01_S5_S7_Household.dta,s5cq20,Amount your household pay for electricity the last 4 weeks?
+CS_S01_S5_S7_Household.dta,s5cq20a,Does your household have an internet connection
+CS_S01_S5_S7_Household.dta,s5cq20b,What is the main kind of internet connection used by household members?
+CS_S01_S5_S7_Household.dta,s5cq20c,What is the main barrier/reason for not accessing internet at home?
+CS_S01_S5_S7_Household.dta,s5cq21,Type of your primary cook stove
+CS_S01_S5_S7_Household.dta,s5cq22a,Three main sources of cooking fuel you used on this cook stove Most used(Primary
+CS_S01_S5_S7_Household.dta,s5cq22b,Three main sources of cooking fuel you used on this cook stove Second most used
+CS_S01_S5_S7_Household.dta,s5cq22c,Three main sources of cooking fuel you used on this cook stove Most used(third)
+CS_S01_S5_S7_Household.dta,s5cq23,Where did you normally cook with the cook stove?
+CS_S01_S5_S7_Household.dta,s5cq24,How does your household dispose of its rubbish/garbage?
+CS_S01_S5_S7_Household.dta,s5cq25,What type of toilet does your household use?
+CS_S01_S5_S7_Household.dta,s5cq26,Is the toilet facility shared with another household?
+CS_S01_S5_S7_Household.dta,s5cq27,"Number of households in total use this toilet facility, including your own house"
+CS_S01_S5_S7_Household.dta,s5cq28,Has your (pit latrine or septic tank) ever been emptied?
+CS_S01_S5_S7_Household.dta,s5cq29,who removed the content of toilet last time it was empted
+CS_S01_S5_S7_Household.dta,s5cq30,Where were the contents emptied to?
+CS_S01_S5_S7_Household.dta,s5cq31,faced any problems that resulted from environmental destruction in the previous 
+CS_S01_S5_S7_Household.dta,s5cq32,main disaster you have experienced with your dwelling
+CS_S01_S5_S7_Household.dta,s5cq33,Have you received any environmental information in the last 12 months
+CS_S01_S5_S7_Household.dta,s5cq34,main source of information on environmental issues
+CS_S01_S5_S7_Household.dta,s5dq1,Main construction material of exterior wall
+CS_S01_S5_S7_Household.dta,s5dq2,Main roofing material for dwelling
+CS_S01_S5_S7_Household.dta,s5dq3,Main floor material for dwelling
+CS_S01_S5_S7_Household.dta,s5dq4,Area of the floor for dwelling-outside
+CS_S01_S5_S7_Household.dta,s5eq1,Unsual negative situation  affected household
+CS_S01_S5_S7_Household.dta,s5eq2a,Main problems affecting your household during the last 12 months(1st  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2b,Main problems affecting your household during the last 12 months(2nd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2c,Main problems affecting your household during the last 12 months(3rd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2aa_m,Main problems affecting your household during the last 12 months(1st  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2ab_m,Main problems affecting your household during the last 12 months(2nd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2ac_m,Main problems affecting your household during the last 12 months(3rd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2aa_y,Main problems affecting your household during the last 12 months(1st  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2ab_y,Main problems affecting your household during the last 12 months(2nd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq2ac_y,Main problems affecting your household during the last 12 months(3rd  severe sho
+CS_S01_S5_S7_Household.dta,s5eq3a,What did the household do to compensate for the consequences of the chock in the
+CS_S01_S5_S7_Household.dta,s5eq3b,What did the household do to compensate for the consequences of the chock in the
+CS_S01_S5_S7_Household.dta,s5eq3c,What did the household do to compensate for the consequences of the chock in the
+CS_S01_S5_S7_Household.dta,s5eq4a,Number of months did it take your HH to recover from the recent shock and get ba
+CS_S01_S5_S7_Household.dta,s5eq4b,Number of months did it take your HH to recover from the recent shock and get ba
+CS_S01_S5_S7_Household.dta,s5eq4c,Number of months did it take your HH to recover from the recent shock and get ba
+CS_S01_S5_S7_Household.dta,s7aq4,"Did any member of your household own and/or raise any livestock, herds, other fa"
+CS_S01_S5_S7_Household.dta,s7aq4a,How many of the following livestock or poultry does the household own - Cattle
+CS_S01_S5_S7_Household.dta,s7aq4b,How many of the following livestock or poultry does the household own - Goats
+CS_S01_S5_S7_Household.dta,s7aq4c,How many of the following livestock or poultry does the household own - Sheep
+CS_S01_S5_S7_Household.dta,s7aq4d,How many of the following livestock or poultry does the household own - Pigs
+CS_S01_S5_S7_Household.dta,s7aq4e,How many of the following livestock or poultry does the household own - Poultry 
+CS_S01_S5_S7_Household.dta,s7aq4f,How many of the following livestock or poultry does the household own - Other (s
+CS_S01_S5_S7_Household.dta,s7a2q1,Have you ever received a cow from the Governments ?one cow per poor family polic
+CS_S01_S5_S7_Household.dta,s7a2q2,In what year did you receive this animal?
+CS_S01_S5_S7_Household.dta,s7a2q3,Do you still keep this animal?
+CS_S01_S5_S7_Household.dta,s7a2q4,Household ever receiced animal from NGO or other social protection scheme
+CS_S01_S5_S7_Household.dta,s7a2q5a,Kind of animal 1st
+CS_S01_S5_S7_Household.dta,s7a2q6a,Has the number of animals changed (Cow poor family)
+CS_S01_S5_S7_Household.dta,s7a2q6b,Has the number of animals changed (1st animal from NGO)
+CS_S01_S5_S7_Household.dta,s7a2q6c,Has the number of animals changed (2nd animal from NGO)
+CS_S01_S5_S7_Household.dta,s7a2q7,Household uses a maintained pasture
+CS_S01_S5_S7_Household.dta,quintile,Quintiles of real consumption per ae
+CS_S01_S5_S7_Household.dta,s5cq4a,Distance in meters between your dwelling
+CS_S01_S5_S7_Household.dta,strata_id,strata_id
+CS_S01_S5_S7_Household.dta,weight,Household Weight
+CS_S01_S5_S7_Household.dta,pop_wt,Population Weight
+CS_S01_S5_S7_Household.dta,epov_jan,Extreme Poverty
+CS_S01_S5_S7_Household.dta,pov_jan,Poverty Rate
+CS_S01_S5_S7_Household.dta,poverty,Welfare Categories
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,hhid,Household Identification
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,clust,Clust
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,province,Province
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,district,District
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,ur,Residence area
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,pid,Person ID Number(EICV7)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q1,Sex
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q2,Relation with the head of household
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q3y,Age (Years)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q3m,Age (Months)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q4,Marital status
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q5a,country of birth
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q5b,District of birth
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q6,Nationality
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q7a,Absent during past 12 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q7,how many months has been away from this household during past 12 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q8,primary  reason of absence from household in the last 12 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q9,Resident of another household in the last 12 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q10,Will be resident in the household during the period of enumeration
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q11,primary n reason for absence during enumeration
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q12,Father still alive
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q13,Mother still alive
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s1q14,Household membership
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q2,Always lived in the district
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q3y,Duration since last move (years)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q3m,Duration since last move (months)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q4a,country  lived prior to current place
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q4b,District lived prior to current place
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q5,Kind of place lived prior to current place
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q6,Duration lived in the previuos location years
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q7,Primary reason for moving
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s2q8,Move alone or with other members of your household
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q2,Is [name] currently covered by any health insurance?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q3,Main health insurance carry
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q4,Suffer from an illness or injury over the last 4weeks
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q5,Medical consultation in the over last 4 weeks
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q5a,why not consult any Medical profession
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q6,Main reason for medical consultation
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q7,Difficulty in seeing
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q8,Difficulty hearing
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q9,Difficulty in moving
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q10,Difficulty in remembering or concentrating
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q11,Difficulty communicating
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s3q12,Difficulty in self-care (such as: washing all over or dressing)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq1,Ever been to school or organized learning
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq1a,Main reason of never attended school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq2,Highest class succesfully attended in school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq2a,years of school  complete successfully at that level?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq3,Highest diploma/certificate/ degree you have ever obtained
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq6a,Class attended in 2022/2023
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq6b,Class attended in 2023/2024
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq6c,Class attended in 2024/2025
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq6d,Cause of repeat the 2023 class in 2024
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq7,Attended school in the last 12 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq8,Highest level of education attended in last 12 months 
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq8a,Highest class attended in last 12 months 
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq8b,Boarding School
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq9,Age when studying in the Reported class
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq10,Reason for delaying start the school?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq11,Type of school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14a,Registration and school fees
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14b,Parent contributions
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14c,School uniforms
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14d,Books and school supplies
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14e,Transport to and from school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14f,Room and board (or board only)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14g,Other schooling expenditures
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq14h,Total education expenses (non-distributed option)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq15,Responsible for payment of majority of school related expenditures
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq15a,school feeding
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq16,Absence at school in last 7 days
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq17,School days not attend last week
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq18,Primary cause of not attending school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq19,Year of lefting school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4aq20,Reason for leaving school
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq1,attended any vocational training
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq2,"Expense of this training including fees, expenses and accommodation"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq3,Have you attended a literacy course?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq4,Able to read a simple note
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq5,Can read proposed a sentence
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq6,Able to write a simple note
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq7,Able to do a written calculation
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq8,Have a mobile telephone
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq9,Phone functionalities. Owned by ...
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq10,type of phone do you own?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq11,reasons for not having a smartphone
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq12,Why does not have a mobile telephone
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq13a,Own a computer
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq13b,Computer literacy
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq13c,How often did use a computer in the last three months?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14a,Copying or moving a file or a folder
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14b,Using copy and paste tools to duplicate or move information
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14c,Sending e-mails with attached files
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14d,Using basic arithmetic formula in a spreadsheet
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14e,Connecting and installing new devices
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14f,"Finding, downloading, installing and configuring software"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14g,Creating electronic presentations with presentation software
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14h,Transferring files between a computer and other devices
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq14i,Writing a computer program using a specialized programming language
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq15,Used of internet in the last 3 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq16,Reason for not using internet in the last three months?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq17,How often did use the internet in the last three months?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq18,Use of the internet in the last three months for finding information about goods
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq19,Use of internet in the last three months for reading or downloading online news/
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq20,Use of the internet in the last three months for obtaining information from webs
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq21,Use of the internet in the last three months for seeking health information
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq22,Use of internet on social media in the last 3 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23a,Use only USSD code  to access E-services or information
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23b,Use application based system  to access E-services or information
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23c,Use mobile financial services(MOMO/AIRTEL MONEY/MOCASH/PUSH AND PULL)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23d," Use any social media (whatsapp or facebook, or instagram or youtube or twitter "
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23e,Access information through web browser
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23f,Access IREMBO services
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23g,Use any E-commerce plaforms
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq23h,Access E-learning platforms
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq25,Use the internet from  in the last 3 months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s4bq26,Type of device used in accessing social media in the last three months
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq2,Worked on own farm no payment
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq3,products obtained from this agricultural  activity for
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq4,Carry out any agricultural activity
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq5,Worked for salary or wages in non-farm sector
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq6,Run a non-farm business for cash or profit
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq7,Worked in a non-fam business
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq8,work as an unpaid trainee worker or as a volunteer worker in any economic activi
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq9,"any economic activity (job, business or agriculture) from which he/she was tempo"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq10,Main reason not working over the last 7 days
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq11,Receiving an income from his/her economic activity during absence?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6aq12,to work for a period less than 3 months?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq1,Hours usually work in the all economic activities over a week
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq2,Hours  actually work in all economic activities last 7 days
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq3, ISCO level 1
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq4, ISIC level 1
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq5,What is [NAME]?s institutional sector of the main economic activity?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq6,perform this main economic activity overnight from 6pm to 6 am?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq7,What is [NAME]?s status in economic activity
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq8,Nature of [names]s? economic activity contract?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq9a,usually earn in this main job (Amount)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6bq9b,usually earn in this main job (Unit)
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq1,"Over the last 7 days, fetch water for the household?"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq2,Number of hours spend fetching water over the last 7 days
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq3,"Over the last 7 days,   forage for firewood for the household"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq4,How many hours    spend foraging for wood over the last 7 days
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq5,"Over the last 7 days, searching for  fodder or grazing for the household?s anima"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq6,How many hours spend  caring for or searching for fodder over the last 7 days?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq7,"Over the last 7 days, did go to the market for the household for shopping?"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq8,How many hours did spend going to market for shopping the last 7 days (to and fr
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq9,"Over the last 7 days, did cook for the household?"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq10,How many hours did spend cooking over the last 7 days?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq11,"Over the last 7 days, did spend any time on other household chores such as laund"
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,s6cq12,How many hours did spend on other household chores over the last 7 days?
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,strata_id,strata_id
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,weight,Household Weight
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,epov_jan,Extreme Poverty
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,pov_jan,Poverty Rate
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,poverty,Welfare Categories
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,quintile,Quintiles of real consumption per ae
+CS_S0_S1_S2_S3_S4_S6A_S6B_S6C_Person.dta,ed_foodgov,Gvt Contribution to School feeding
+CS_S10A1_A2_credits.dta,hhid,Household Identification
+CS_S10A1_A2_credits.dta,clust,Clust
+CS_S10A1_A2_credits.dta,province,Province
+CS_S10A1_A2_credits.dta,district,District
+CS_S10A1_A2_credits.dta,ur,Residence area
+CS_S10A1_A2_credits.dta,pid,Loan recipient Id Number
+CS_S10A1_A2_credits.dta,s10aq1,Household member tried to obtain a loan
+CS_S10A1_A2_credits.dta,s10aq2,Main reason why loan was denied
+CS_S10A1_A2_credits.dta,s10aq3,Household members owe money
+CS_S10A1_A2_credits.dta,s10aq4,Loan Id Number
+CS_S10A1_A2_credits.dta,s10aq6,Loan source
+CS_S10A1_A2_credits.dta,s10aq7,Main purpose of loan
+CS_S10A1_A2_credits.dta,s10aq8,Property required to secure the loan
+CS_S10A1_A2_credits.dta,s10aq9,Has loan been repaid partislly or completely
+CS_S10A1_A2_credits.dta,strata_id,strata_id
+CS_S10A1_A2_credits.dta,weight,Household Weight
+CS_S10A1_A2_credits.dta,quintile,Quintiles of real consumption per ae
+CS_S10A1_A2_credits.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S10A1_A2_credits.dta,poverty,Welfare Categories
+CS_S10A1_A2_credits.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S10B_durables.dta,hhid,Household Identification
+CS_S10B_durables.dta,clust,Clust
+CS_S10B_durables.dta,province,Province
+CS_S10B_durables.dta,district,District
+CS_S10B_durables.dta,ur,Residence area
+CS_S10B_durables.dta,s10bq0,Item code
+CS_S10B_durables.dta,s10bq1,Coicop
+CS_S10B_durables.dta,s10bq2,How many does your household own?
+CS_S10B_durables.dta,s10bq3,Status when purchased
+CS_S10B_durables.dta,s10bq4,Article 1 purchase year
+CS_S10B_durables.dta,s10bq5a,Article 1 current value
+CS_S10B_durables.dta,s10bq5b,Article 2 current value
+CS_S10B_durables.dta,s10bq5c,Article 3 current value
+CS_S10B_durables.dta,strata_id,strata_id
+CS_S10B_durables.dta,weight,Household Weight
+CS_S10B_durables.dta,epov_jan,Extreme Poverty
+CS_S10B_durables.dta,pov_jan,Poverty Rate
+CS_S10B_durables.dta,poverty,Welfare Categories
+CS_S10B_durables.dta,quintile,Quintiles of real consumption per ae
+CS_S10C_Savings.dta,hhid,Household Identification
+CS_S10C_Savings.dta,clust,Clust
+CS_S10C_Savings.dta,province,Province
+CS_S10C_Savings.dta,district,District
+CS_S10C_Savings.dta,ur,Residence area
+CS_S10C_Savings.dta,pid,ID number of person saving
+CS_S10C_Savings.dta,s10cq1,Ownership of bank account(Financial Institution/momo/Tontine)
+CS_S10C_Savings.dta,s10cq3,Id Number of account
+CS_S10C_Savings.dta,s10cq4,Does ... have account (bank account/momo)?
+CS_S10C_Savings.dta,s10cq5,What institution does ... bank with?
+CS_S10C_Savings.dta,s10cq6,Which type of account does ... own?
+CS_S10C_Savings.dta,s10cq7,Does the account generate interest?
+CS_S10C_Savings.dta,s10cq8,Does ... participate in a tontine
+CS_S10C_Savings.dta,strata_id,strata_id
+CS_S10C_Savings.dta,weight,Household Weight
+CS_S10C_Savings.dta,quintile,Quintiles of real consumption per ae
+CS_S10C_Savings.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S10C_Savings.dta,poverty,Welfare Categories
+CS_S10C_Savings.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S5F_access_to_services.dta,hhid,Household Identification
+CS_S5F_access_to_services.dta,clust,Clust
+CS_S5F_access_to_services.dta,province,Province
+CS_S5F_access_to_services.dta,district,District
+CS_S5F_access_to_services.dta,ur,Residence area
+CS_S5F_access_to_services.dta,s5fq0,Id Basic service
+CS_S5F_access_to_services.dta,s5fq0d,Basic service description
+CS_S5F_access_to_services.dta,s5fq1,Frequency of use of service
+CS_S5F_access_to_services.dta,s5fq2,Main reason of litle or not used
+CS_S5F_access_to_services.dta,s5fq3a,Time to arrive to the service (hours)
+CS_S5F_access_to_services.dta,s5fq3b,Time to arrive to the service (minutes)
+CS_S5F_access_to_services.dta,s5fq4,Distance from here to the nearest
+CS_S5F_access_to_services.dta,s5fq5,Mode of transport to access service
+CS_S5F_access_to_services.dta,s5fq6,Service quality satisfaction
+CS_S5F_access_to_services.dta,s5fq7,Service quality in last 12 months
+CS_S5F_access_to_services.dta,s5fq8,Improved result  of  VUP PW activities
+CS_S5F_access_to_services.dta,strata_id,strata_id
+CS_S5F_access_to_services.dta,weight,Household Weight
+CS_S5F_access_to_services.dta,quintile,Quintiles of real consumption per ae
+CS_S5F_access_to_services.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S5F_access_to_services.dta,poverty,Welfare Categories
+CS_S5F_access_to_services.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S8A1_Expenditure.dta,hhid,Household Identification
+CS_S8A1_Expenditure.dta,clust,Clust
+CS_S8A1_Expenditure.dta,province,Province
+CS_S8A1_Expenditure.dta,district,District
+CS_S8A1_Expenditure.dta,ur,Residence area
+CS_S8A1_Expenditure.dta,s8a1q0,Items Name
+CS_S8A1_Expenditure.dta,s8a1q2,Household purchased article  over the last 12 months
+CS_S8A1_Expenditure.dta,s8a1q3,Amount spent to purchase  in last 12 months
+CS_S8A1_Expenditure.dta,s8a1q4,Place where  purchased in the last 12 months
+CS_S8A1_Expenditure.dta,s8a1q5,Article received as Gifts and In-kind
+CS_S8A1_Expenditure.dta,s8a1q6,Value of Article received as Gifts and In-kind
+CS_S8A1_Expenditure.dta,strata_id,strata_id
+CS_S8A1_Expenditure.dta,weight,Household Weight
+CS_S8A1_Expenditure.dta,epov_jan,Extreme Poverty
+CS_S8A1_Expenditure.dta,pov_jan,Poverty Rate
+CS_S8A1_Expenditure.dta,poverty,Welfare Categories
+CS_S8A1_Expenditure.dta,quintile,Quintiles of real consumption per ae
+CS_S8A2_Expenditure.dta,hhid,Household Identification
+CS_S8A2_Expenditure.dta,clust,Clust
+CS_S8A2_Expenditure.dta,province,Province
+CS_S8A2_Expenditure.dta,district,District
+CS_S8A2_Expenditure.dta,ur,Residence area
+CS_S8A2_Expenditure.dta,s8a2q0,Item name
+CS_S8A2_Expenditure.dta,s8a2q2,Article purchased
+CS_S8A2_Expenditure.dta,s8a2q3,Amount spent to purchase  in last 4 weeks
+CS_S8A2_Expenditure.dta,s8a2q4,Place where  purchased in the last 4 weeks
+CS_S8A2_Expenditure.dta,s8a2q5,Article received as Gifts and In-kind
+CS_S8A2_Expenditure.dta,s8a2q6,Value of Article received as Gifts and In-kind
+CS_S8A2_Expenditure.dta,strata_id,strata_id
+CS_S8A2_Expenditure.dta,weight,Household Weight
+CS_S8A2_Expenditure.dta,epov_jan,Extreme Poverty
+CS_S8A2_Expenditure.dta,pov_jan,Poverty Rate
+CS_S8A2_Expenditure.dta,poverty,Welfare Categories
+CS_S8A2_Expenditure.dta,quintile,Quintiles of real consumption per ae
+CS_S8A3_Expenditure.dta,hhid,Household Identification
+CS_S8A3_Expenditure.dta,clust,Clust
+CS_S8A3_Expenditure.dta,province,Province
+CS_S8A3_Expenditure.dta,district,District
+CS_S8A3_Expenditure.dta,ur,Residence area
+CS_S8A3_Expenditure.dta,s8a3q0,Items
+CS_S8A3_Expenditure.dta,s8a3q2,Article purchased over past 7 days
+CS_S8A3_Expenditure.dta,s8a3q3,Amount spent to purchase  in last 7 days
+CS_S8A3_Expenditure.dta,s8a3q4,Place where  purchased in the last 7 days
+CS_S8A3_Expenditure.dta,s8a3q5,Article received as Gifts and In-kind
+CS_S8A3_Expenditure.dta,s8a3q6,Household acquire from other sources item over past 7 days - AMOUNT
+CS_S8A3_Expenditure.dta,s08a4_4,Consumed Own Production during the past 7 days
+CS_S8A3_Expenditure.dta,s08a4_5,Quantity consumed?
+CS_S8A3_Expenditure.dta,s08a4_6,Unit of measure (Item)
+CS_S8A3_Expenditure.dta,s08a4_7,At what price could you sell (Item)
+CS_S8A3_Expenditure.dta,strata_id,strata_id
+CS_S8A3_Expenditure.dta,weight,Household Weight
+CS_S8A3_Expenditure.dta,epov_jan,Extreme Poverty
+CS_S8A3_Expenditure.dta,pov_jan,Poverty Rate
+CS_S8A3_Expenditure.dta,poverty,Welfare Categories
+CS_S8A3_Expenditure.dta,quintile,Quintiles of real consumption per ae
+CS_S8B_Food_Expenditure_Consumption.dta,hhid,Household Identification
+CS_S8B_Food_Expenditure_Consumption.dta,clust,Clust
+CS_S8B_Food_Expenditure_Consumption.dta,province,Province
+CS_S8B_Food_Expenditure_Consumption.dta,district,District
+CS_S8B_Food_Expenditure_Consumption.dta,ur,Residence area
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq0,Items
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq2_v2,Item ourchased (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3a_v2,Quantity purchased (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3b_v2,UNIT of [Item] purchased (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq4_v2,Value of [Item] Purchased in LOCAL CURRENCY Amount (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq5_v2,Place of Purchase (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq6_v2,Household Consumption (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7a_v2,Total Consumption (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7b_v2,Total Consumption- UNIT (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq8_v2,Total Consumption from purchased (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq9_v2,Consumption from Own Produced (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10_v2,Total Consumption from Own Produced (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10a_v2,Price from Own Produce (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq11_v2,Consumption from Gifts and In-kind (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq12_v2,Total Consumption from Gifts and In-Kind (Visit2)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq2_v3,Item ourchased (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3a_v3,Quantity purchased (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3b_v3,UNIT of [Item] purchased (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq4_v3,Value of [Item] Purchased in LOCAL CURRENCY Amount (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq5_v3,Place of Purchase (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq6_v3,Household Consumption (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7a_v3,Total Consumption (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7b_v3,Total Consumption- UNIT (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq8_v3,Total Consumption from purchased (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq9_v3,Consumption from Own Produced (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10_v3,Total Consumption from Own Produced (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10a_v3,Price from Own Produce (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq11_v3,Consumption from Gifts and In-kind (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq12_v3,Total Consumption from Gifts and In-Kind (Visit3)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq2_v4,Item ourchased (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3a_v4,Quantity purchased (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3b_v4,UNIT of [Item] purchased (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq4_v4,Value of [Item] Purchased in LOCAL CURRENCY Amount (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq5_v4,Place of Purchase (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq6_v4,Household Consumption (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7a_v4,Total Consumption (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7b_v4,Total Consumption- UNIT (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq8_v4,Total Consumption from purchased (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq9_v4,Consumption from Own Produced (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10_v4,Total Consumption from Own Produced (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10a_v4,Price from Own Produce (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq11_v4,Consumption from Gifts and In-kind (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq12_v4,Total Consumption from Gifts and In-Kind (Visit4)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq2_v5,Item ourchased (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3a_v5,Quantity purchased (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq3b_v5,UNIT of [Item] purchased (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq4_v5,Value of [Item] Purchased in LOCAL CURRENCY Amount (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq5_v5,Place of Purchase (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq6_v5,Household Consumption (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7a_v5,Total Consumption (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq7b_v5,Total Consumption- UNIT (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq8_v5,Total Consumption from purchased (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq9_v5,Consumption from Own Produced (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10_v5,Total Consumption from Own Produced (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq10a_v5,Price from Own Produce (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq11_v5,Consumption from Gifts and In-kind (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,s8bq12_v5,Total Consumption from Gifts and In-Kind (Visit5)
+CS_S8B_Food_Expenditure_Consumption.dta,strata_id,strata_id
+CS_S8B_Food_Expenditure_Consumption.dta,weight,Household Weight
+CS_S8B_Food_Expenditure_Consumption.dta,epov_jan,Extreme Poverty
+CS_S8B_Food_Expenditure_Consumption.dta,pov_jan,Poverty Rate
+CS_S8B_Food_Expenditure_Consumption.dta,poverty,Welfare Categories
+CS_S8B_Food_Expenditure_Consumption.dta,quintile,Quintiles of real consumption per ae
+CS_S8C_Food_Away_from_home.dta,hhid,Household Identification
+CS_S8C_Food_Away_from_home.dta,clust,Clust
+CS_S8C_Food_Away_from_home.dta,province,Province
+CS_S8C_Food_Away_from_home.dta,district,District
+CS_S8C_Food_Away_from_home.dta,ur,Residence area
+CS_S8C_Food_Away_from_home.dta,pid,Person Identification
+CS_S8C_Food_Away_from_home.dta,s8cq2_v2,Consumed any food away from home Since my last visit ?
+CS_S8C_Food_Away_from_home.dta,s8cq4_v2,Amount pay for breakfast away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq5_v2,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq6_v2,Amount paid for lunch away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq7_v2,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq8_v2,Amount paid for dinner away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq9_v2,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq10_v2,Amount paid for food/snacks between meals away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq11_v2,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq12_v2,Amount paid for any hot beverage away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq13_v2,Point Service
+CS_S8C_Food_Away_from_home.dta,s8cq14_v2,Amount paid for any non-alcoholic drinks away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq15_v2,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq16_v2,Amount paid for alcoholic drinks taken away from home (Visit2)
+CS_S8C_Food_Away_from_home.dta,s8cq17_v2,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq2_v3,Consumed any food away from home Since my last visit ?
+CS_S8C_Food_Away_from_home.dta,s8cq4_v3,Amount pay for breakfast away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq5_v3,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq6_v3,Amount paid for lunch away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq7_v3,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq8_v3,Amount paid for dinner away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq9_v3,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq10_v3,Amount paid for food/snacks between meals away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq11_v3,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq12_v3,Amount paid for any hot beverage away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq13_v3,Point Service
+CS_S8C_Food_Away_from_home.dta,s8cq14_v3,Amount paid for any non-alcoholic drinks away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq15_v3,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq16_v3,Amount paid for alcoholic drinks taken away from home (Visit3)
+CS_S8C_Food_Away_from_home.dta,s8cq17_v3,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq2_v4,Consumed any food away from home Since my last visit ?
+CS_S8C_Food_Away_from_home.dta,s8cq4_v4,Amount pay for breakfast away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq5_v4,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq6_v4,Amount paid for lunch away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq7_v4,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq8_v4,Amount paid for dinner away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq9_v4,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq10_v4,Amount paid for food/snacks between meals away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq11_v4,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq12_v4,Amount paid for any hot beverage away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq13_v4,Point Service
+CS_S8C_Food_Away_from_home.dta,s8cq14_v4,Amount paid for any non-alcoholic drinks away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq15_v4,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq16_v4,Amount paid for alcoholic drinks taken away from home (Visit4)
+CS_S8C_Food_Away_from_home.dta,s8cq17_v4,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq2_v5,Consumed any food away from home Since my last visit ?
+CS_S8C_Food_Away_from_home.dta,s8cq4_v5,Amount pay for breakfast away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq5_v5,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq6_v5,Amount paid for lunch away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq7_v5,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq8_v5,Amount paid for dinner away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq9_v5,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq10_v5,Amount paid for food/snacks between meals away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq11_v5,Point of Service
+CS_S8C_Food_Away_from_home.dta,s8cq12_v5,Amount paid for any hot beverage away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq13_v5,Point Service
+CS_S8C_Food_Away_from_home.dta,s8cq14_v5,Amount paid for any non-alcoholic drinks away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq15_v5,Point service
+CS_S8C_Food_Away_from_home.dta,s8cq16_v5,Amount paid for alcoholic drinks taken away from home (Visit5)
+CS_S8C_Food_Away_from_home.dta,s8cq17_v5,Point service
+CS_S8C_Food_Away_from_home.dta,strata_id,strata_id
+CS_S8C_Food_Away_from_home.dta,weight,Household Weight
+CS_S8C_Food_Away_from_home.dta,epov_jan,Extreme Poverty
+CS_S8C_Food_Away_from_home.dta,pov_jan,Poverty Rate
+CS_S8C_Food_Away_from_home.dta,poverty,Welfare Categories
+CS_S8C_Food_Away_from_home.dta,quintile,Quintiles of real consumption per ae
+CS_S9A_transfers_out.dta,hhid,Household Identification
+CS_S9A_transfers_out.dta,clust,Clust
+CS_S9A_transfers_out.dta,province,Province
+CS_S9A_transfers_out.dta,district,District
+CS_S9A_transfers_out.dta,ur,Residence area
+CS_S9A_transfers_out.dta,s9aq0,"During the last 12 months, has this household send money or goods in kind to a m"
+CS_S9A_transfers_out.dta,s9aq2a,ID of recipient
+CS_S9A_transfers_out.dta,s9aq2,HH Member
+CS_S9A_transfers_out.dta,s9aq3,Relation with head of household
+CS_S9A_transfers_out.dta,s9aq4,Sex
+CS_S9A_transfers_out.dta,s9aq5,Location of the beneficiary
+CS_S9A_transfers_out.dta,s9aq6,Sent any cash in the last 12 months
+CS_S9A_transfers_out.dta,s9aq7,Total cash transfered in last 12 months
+CS_S9A_transfers_out.dta,s9aq8,Main method for sending money
+CS_S9A_transfers_out.dta,s9aq9,Sent food products
+CS_S9A_transfers_out.dta,s9aq10,Total value of food sent  over the course of the last 12 months
+CS_S9A_transfers_out.dta,s9aq11,Sent other in-kind transfers
+CS_S9A_transfers_out.dta,s9aq12,Total value in-kind transfer in the last 12 months
+CS_S9A_transfers_out.dta,s9aq13,Value  payments require reimbursement
+CS_S9A_transfers_out.dta,strata_id,strata_id
+CS_S9A_transfers_out.dta,weight,Household Weight
+CS_S9A_transfers_out.dta,quintile,Quintiles of real consumption per ae
+CS_S9A_transfers_out.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9A_transfers_out.dta,poverty,Welfare Categories
+CS_S9A_transfers_out.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9B_transfers_in.dta,hhid,Household Identification
+CS_S9B_transfers_in.dta,clust,Clust
+CS_S9B_transfers_in.dta,province,Province
+CS_S9B_transfers_in.dta,district,District
+CS_S9B_transfers_in.dta,ur,Residence area
+CS_S9B_transfers_in.dta,s9bq0,"During the last 12 months, has this household received money or goods in kind fr"
+CS_S9B_transfers_in.dta,s9bq1a,How many people did [name] send money
+CS_S9B_transfers_in.dta,s9bq2,ID number of concern
+CS_S9B_transfers_in.dta,s9bq3,ID number of sender
+CS_S9B_transfers_in.dta,s9bq4,Relation with head of household
+CS_S9B_transfers_in.dta,s9bq5,Sex
+CS_S9B_transfers_in.dta,s9bq6,Location of sender
+CS_S9B_transfers_in.dta,s9bq7,Sent any cash to the HH
+CS_S9B_transfers_in.dta,s9bq8,Total amount of cash received in the last 12 months
+CS_S9B_transfers_in.dta,s9bq9,Main method for receiving money
+CS_S9B_transfers_in.dta,s9bq10,Payments require remboursment
+CS_S9B_transfers_in.dta,strata_id,strata_id
+CS_S9B_transfers_in.dta,weight,Household Weight
+CS_S9B_transfers_in.dta,epov_jan,Extreme Poverty
+CS_S9B_transfers_in.dta,pov_jan,Poverty Rate
+CS_S9B_transfers_in.dta,poverty,Welfare Categories
+CS_S9B_transfers_in.dta,quintile,Quintiles of real consumption per ae
+CS_S9C_other_expenditure.dta,hhid,Household Identification
+CS_S9C_other_expenditure.dta,clust,Clust
+CS_S9C_other_expenditure.dta,province,Province
+CS_S9C_other_expenditure.dta,district,District
+CS_S9C_other_expenditure.dta,ur,Residence area
+CS_S9C_other_expenditure.dta,s9cq1,Expenditure code
+CS_S9C_other_expenditure.dta,s9cq2,Amount spent
+CS_S9C_other_expenditure.dta,strata_id,strata_id
+CS_S9C_other_expenditure.dta,weight,Household Weight
+CS_S9C_other_expenditure.dta,quintile,Quintiles of real consumption per ae
+CS_S9C_other_expenditure.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9C_other_expenditure.dta,poverty,Welfare Categories
+CS_S9C_other_expenditure.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9D1_Direct_Support.dta,hhid,Household Identification
+CS_S9D1_Direct_Support.dta,clust,Clust
+CS_S9D1_Direct_Support.dta,province,Province
+CS_S9D1_Direct_Support.dta,district,District
+CS_S9D1_Direct_Support.dta,ur,Residence area
+CS_S9D1_Direct_Support.dta,pid,Select hh member who is in VUP
+CS_S9D1_Direct_Support.dta,s9d1q1,beneficiaries of VUP(any component)
+CS_S9D1_Direct_Support.dta,s9d1q2,beneficiaries of direct support
+CS_S9D1_Direct_Support.dta,s9d1q2m,Month
+CS_S9D1_Direct_Support.dta,s9d1q2y,Year
+CS_S9D1_Direct_Support.dta,s9d1q3,reason for enrolling in the VUP direct support component
+CS_S9D1_Direct_Support.dta,s9d1q4,How much money the household received from VUP-DS in the past 12 months?
+CS_S9D1_Direct_Support.dta,s9d1q5,way by which direct support payment received
+CS_S9D1_Direct_Support.dta,s9d1q6,Activity by which the direct support benefit used for
+CS_S9D1_Direct_Support.dta,s9d1q6_A,Buy Food
+CS_S9D1_Direct_Support.dta,s9d1q6_B,Buy Cloth
+CS_S9D1_Direct_Support.dta,s9d1q6_C,Buy Home Utensils
+CS_S9D1_Direct_Support.dta,s9d1q6_D,Buy Durables asset
+CS_S9D1_Direct_Support.dta,s9d1q6_E,Pay Education/School Fess
+CS_S9D1_Direct_Support.dta,s9d1q6_F,Pay Health/Medical Expenses
+CS_S9D1_Direct_Support.dta,s9d1q6_G,Buy Animals
+CS_S9D1_Direct_Support.dta,s9d1q6_H,Invest in Farming
+CS_S9D1_Direct_Support.dta,s9d1q6_I,Invest in business Income or income generating activity
+CS_S9D1_Direct_Support.dta,s9d1q6_J,Improve dwelling
+CS_S9D1_Direct_Support.dta,s9d1q6_K,"Savings in SACCO,VSLA or Tontine"
+CS_S9D1_Direct_Support.dta,s9d1q6_L,Saving in EJo Heza
+CS_S9D1_Direct_Support.dta,s9d1q6_M,Other
+CS_S9D1_Direct_Support.dta,s9d1q7,Have you received your DS entitlement for all the months since you joined
+CS_S9D1_Direct_Support.dta,s9d1q8a,Number of delayed days of first last payment
+CS_S9D1_Direct_Support.dta,s9d1q8b,Number of delayed days of second last payment
+CS_S9D1_Direct_Support.dta,s9d1q8c,Number of delayed days of third last payment
+CS_S9D1_Direct_Support.dta,strata_id,strata_id
+CS_S9D1_Direct_Support.dta,weight,Household Weight
+CS_S9D1_Direct_Support.dta,quintile,Quintiles of real consumption per ae
+CS_S9D1_Direct_Support.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9D1_Direct_Support.dta,poverty,Welfare Categories
+CS_S9D1_Direct_Support.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9D2_Classic_Public_Work.dta,hhid,Household Identification
+CS_S9D2_Classic_Public_Work.dta,clust,Clust
+CS_S9D2_Classic_Public_Work.dta,province,Province
+CS_S9D2_Classic_Public_Work.dta,district,District
+CS_S9D2_Classic_Public_Work.dta,ur,Residence area
+CS_S9D2_Classic_Public_Work.dta,pid,HH member ID
+CS_S9D2_Classic_Public_Work.dta,s9d1q1,beneficiaries of VUP(any component)
+CS_S9D2_Classic_Public_Work.dta,s9d2q1,beneficiaries of class public work
+CS_S9D2_Classic_Public_Work.dta,s9d2q2m,join the Classic Public Work Programme / Month
+CS_S9D2_Classic_Public_Work.dta,s9d2q2y,join the Classic Public Work Programme / Year
+CS_S9D2_Classic_Public_Work.dta,s9d2q3,number of months a household participated in cPW over the last 12 months
+CS_S9D2_Classic_Public_Work.dta,s9d2q4,Daily wage
+CS_S9D2_Classic_Public_Work.dta,s9d2q5,way by which cPW payment were received to beneficiary
+CS_S9D2_Classic_Public_Work.dta,s9d2q6,way of receiving cPW payment
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_A,Buy Food
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_B,Buy Cloth
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_C,Buy Home Utensils
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_D,Buy Durables asset
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_E,Pay Education/School Fess
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_F,Pay Health/Medical Expenses
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_G,Buy Animals
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_H,Invest in Farming
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_I,Invest in business Income or income generating activity
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_J,Improve dwelling
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_K,"Savings in SACCO,VSLA or Tontine"
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_L,Saving in EJo Heza
+CS_S9D2_Classic_Public_Work.dta,s9d2q6_M,Other
+CS_S9D2_Classic_Public_Work.dta,s9d2q7a,Number of delayed days of first last payment
+CS_S9D2_Classic_Public_Work.dta,s9d2q7b,Number of delayed days of second last payment
+CS_S9D2_Classic_Public_Work.dta,s9d2q7c,Number of delayed days of third last payment
+CS_S9D2_Classic_Public_Work.dta,s9d2q8,Did you receive payment for all the work performed during the last 12 months?
+CS_S9D2_Classic_Public_Work.dta,s9d2q9,When was the last Public Works payment received?
+CS_S9D2_Classic_Public_Work.dta,s9d2q10,How much did you receive in the last cPW payment?
+CS_S9D2_Classic_Public_Work.dta,s9d2q11,What is the total value of cPW payments you received over the last 12 months?
+CS_S9D2_Classic_Public_Work.dta,strata_id,strata_id
+CS_S9D2_Classic_Public_Work.dta,weight,Household Weight
+CS_S9D2_Classic_Public_Work.dta,quintile,Quintiles of real consumption per ae
+CS_S9D2_Classic_Public_Work.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9D2_Classic_Public_Work.dta,poverty,Welfare Categories
+CS_S9D2_Classic_Public_Work.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9D3_Expanded_Public_Work.dta,hhid,Household Identification
+CS_S9D3_Expanded_Public_Work.dta,clust,Clust
+CS_S9D3_Expanded_Public_Work.dta,province,Province
+CS_S9D3_Expanded_Public_Work.dta,district,District
+CS_S9D3_Expanded_Public_Work.dta,ur,Residence area
+CS_S9D3_Expanded_Public_Work.dta,pid,HH member ID
+CS_S9D3_Expanded_Public_Work.dta,s9d1q1,beneficiaries of VUP(any component)
+CS_S9D3_Expanded_Public_Work.dta,s9d3q1,beneficiaries of Expanded Public Work
+CS_S9D3_Expanded_Public_Work.dta,s9d3q2,Components of ePW a beneficiary working on
+CS_S9D3_Expanded_Public_Work.dta,s9d3q2m,join the Classic Public Work Programme / Month
+CS_S9D3_Expanded_Public_Work.dta,s9d3q2y,join the Classic Public Work Programme / Year
+CS_S9D3_Expanded_Public_Work.dta,s9d3q3,number of months a household participated in ePW over the last 12 months
+CS_S9D3_Expanded_Public_Work.dta,s9d3q4,Mode of getting ePW payment
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5,activity by which ePW benefit used for in the last 12 months
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_A,Buy Food
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_B,Buy Cloth
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_C,Buy Home Utensils
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_D,Buy Durables asset
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_E,Pay Education/School Fess
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_F,Pay Health/Medical Expenses
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_G,Buy Animals
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_H,Invest in Farming
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_I,Invest in business Income or income generating activity
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_J,Improve dwelling
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_K,"Savings in SACCO,VSLA or Tontine"
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_L,Saving in EJo Heza
+CS_S9D3_Expanded_Public_Work.dta,s9d3q5_M,Other
+CS_S9D3_Expanded_Public_Work.dta,s9d3q6a,Number of delayed days of first last payment
+CS_S9D3_Expanded_Public_Work.dta,s9d3q6b,Number of delayed days of second last payment
+CS_S9D3_Expanded_Public_Work.dta,s9d3q6c,Number of delayed days of third last payment
+CS_S9D3_Expanded_Public_Work.dta,s9d3q7,Whether beneficiary of ePW  received payment of all work performed during the la
+CS_S9D3_Expanded_Public_Work.dta,s9d3q8,Month of the last EPW payment received
+CS_S9D3_Expanded_Public_Work.dta,s9d3q9,EPW beneficiary's entitlement for all months since program enrollment
+CS_S9D3_Expanded_Public_Work.dta,s9d3q10,Total amount received from ePW payment over the last 12 months
+CS_S9D3_Expanded_Public_Work.dta,s9d3q11,monthly wage earned during the last participation in ePW
+CS_S9D3_Expanded_Public_Work.dta,strata_id,strata_id
+CS_S9D3_Expanded_Public_Work.dta,weight,Household Weight
+CS_S9D3_Expanded_Public_Work.dta,quintile,Quintiles of real consumption per ae
+CS_S9D3_Expanded_Public_Work.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9D3_Expanded_Public_Work.dta,poverty,Welfare Categories
+CS_S9D3_Expanded_Public_Work.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9D4_NSDS.dta,hhid,Household Identification
+CS_S9D4_NSDS.dta,clust,Clust
+CS_S9D4_NSDS.dta,province,Province
+CS_S9D4_NSDS.dta,district,District
+CS_S9D4_NSDS.dta,ur,Residence area
+CS_S9D4_NSDS.dta,pid,HH member ID
+CS_S9D4_NSDS.dta,s9d1q1,beneficiaries of VUP(any component)
+CS_S9D4_NSDS.dta,s9d4q1,HH has any Beneficiaries of NUTRITION SENSITIVE DIRECT SUPPORT
+CS_S9D4_NSDS.dta,s9d4q1aa_y,Join the NSDS /Year
+CS_S9D4_NSDS.dta,s9d4q1aa_m,Join the NSDS /Month
+CS_S9D4_NSDS.dta,s9d4q2,status while being enrolled in NSDS
+CS_S9D4_NSDS.dta,s9d4q3,number of ANC visits for women having baby while enrolled when they were pregnan
+CS_S9D4_NSDS.dta,s9d4q4,number of PNC visits in  respect of the child (0-6 weeks old) for which a woman 
+CS_S9D4_NSDS.dta,s9d4q5,heights for age measurement visits attended at health facility
+CS_S9D4_NSDS.dta,s9d4q6,activity by which NSDS benefit used for in the last 12 months
+CS_S9D4_NSDS.dta,s9d4q6_A,Buy Food
+CS_S9D4_NSDS.dta,s9d4q6_B,Buy Cloth
+CS_S9D4_NSDS.dta,s9d4q6_C,Buy Home Utensils
+CS_S9D4_NSDS.dta,s9d4q6_D,Buy Durables asset
+CS_S9D4_NSDS.dta,s9d4q6_E,Pay Education/School Fess
+CS_S9D4_NSDS.dta,s9d4q6_F,Pay Health/Medical Expenses
+CS_S9D4_NSDS.dta,s9d4q6_G,Buy Animals
+CS_S9D4_NSDS.dta,s9d4q6_H,Invest in Farming
+CS_S9D4_NSDS.dta,s9d4q6_I,Invest in business Income or income generating activity
+CS_S9D4_NSDS.dta,s9d4q6_J,Improve dwelling
+CS_S9D4_NSDS.dta,s9d4q6_K,"Savings in SACCO,VSLA or Tontine"
+CS_S9D4_NSDS.dta,s9d4q6_L,Saving in EJo Heza
+CS_S9D4_NSDS.dta,s9d4q6_M,Other
+CS_S9D4_NSDS.dta,s9d4q7,number of quarters by which HH received NSDS payment in the past 12 months
+CS_S9D4_NSDS.dta,s9d4q8,amount benefitted from NSDS in first quarter
+CS_S9D4_NSDS.dta,s9d4q9a,Number of delayed days of first last payment
+CS_S9D4_NSDS.dta,s9d4q9b,Number of delayed days of second last payment
+CS_S9D4_NSDS.dta,s9d4q9c,Number of delayed days of third last payment
+CS_S9D4_NSDS.dta,s9d4q10,mode of receiving NSDS payment
+CS_S9D4_NSDS.dta,s9d4q11,HH member ID
+CS_S9D4_NSDS.dta,s9d1q2,beneficiaries of direct support
+CS_S9D4_NSDS.dta,s9d4q8a,amount benefitted from NSDS in first quarter
+CS_S9D4_NSDS.dta,s9d4q8b,amount benefitted from NSDS in third  quarter
+CS_S9D4_NSDS.dta,s9d4q8c,amount benefitted from NSDS in third  quarter
+CS_S9D4_NSDS.dta,s9d4q8d,amount benefitted from NSDS in fourth quarter
+CS_S9D4_NSDS.dta,strata_id,strata_id
+CS_S9D4_NSDS.dta,weight,Household Weight
+CS_S9D4_NSDS.dta,quintile,Quintiles of real consumption per ae
+CS_S9D4_NSDS.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9D4_NSDS.dta,poverty,Welfare Categories
+CS_S9D4_NSDS.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9D5_Financial_Services.dta,hhid,Household Identification
+CS_S9D5_Financial_Services.dta,clust,Clust
+CS_S9D5_Financial_Services.dta,province,Province
+CS_S9D5_Financial_Services.dta,district,District
+CS_S9D5_Financial_Services.dta,ur,Residence area
+CS_S9D5_Financial_Services.dta,pid,ID HH Member
+CS_S9D5_Financial_Services.dta,s9d1q1,beneficiaries of VUP(any component)
+CS_S9D5_Financial_Services.dta,s9d5q1,household who ever applied for financial service loan
+CS_S9D5_Financial_Services.dta,s9d5q2m,When joined financial Component / Month
+CS_S9D5_Financial_Services.dta,s9d5q2y,When joined financial Component / Year
+CS_S9D5_Financial_Services.dta,s9d5q2,Approved financial services loan
+CS_S9D5_Financial_Services.dta,s9d5q3,Whether the total amount was received as requested
+CS_S9D5_Financial_Services.dta,s9d5q4,the total amount of the loan received
+CS_S9D5_Financial_Services.dta,s9d5q5,type of financial services loan
+CS_S9D5_Financial_Services.dta,s9d5q6,Main project activity that originally planned for loan
+CS_S9D5_Financial_Services.dta,s9d5q7,Main project activity that originally planned for loan
+CS_S9D5_Financial_Services.dta,s9d1q2,beneficiaries of direct support
+CS_S9D5_Financial_Services.dta,strata_id,strata_id
+CS_S9D5_Financial_Services.dta,weight,Household Weight
+CS_S9D5_Financial_Services.dta,quintile,Quintiles of real consumption per ae
+CS_S9D5_Financial_Services.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9D5_Financial_Services.dta,poverty,Welfare Categories
+CS_S9D5_Financial_Services.dta,epov_jan,Extreme Poverty Headcount Ratio
+CS_S9E_other_income.dta,hhid,Household Identification
+CS_S9E_other_income.dta,clust,Clust
+CS_S9E_other_income.dta,province,Province
+CS_S9E_other_income.dta,district,District
+CS_S9E_other_income.dta,ur,Residence area
+CS_S9E_other_income.dta,s9eq1,Item Code
+CS_S9E_other_income.dta,s9eq2,Has your household received any of the following in the last 12 months?
+CS_S9E_other_income.dta,s9eq3,How much have you received the last 4 weeks
+CS_S9E_other_income.dta,s9eq4,How much have you received the last 12 months
+CS_S9E_other_income.dta,strata_id,strata_id
+CS_S9E_other_income.dta,weight,Household Weight
+CS_S9E_other_income.dta,quintile,Quintiles of real consumption per ae
+CS_S9E_other_income.dta,pov_jan,Total Poverty Headcount Ratio
+CS_S9E_other_income.dta,poverty,Welfare Categories
+CS_S9E_other_income.dta,epov_jan,Extreme Poverty Headcount Ratio

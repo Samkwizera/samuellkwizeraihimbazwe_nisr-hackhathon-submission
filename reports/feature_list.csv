@@ -1,0 +1,78 @@
+feature,source
+district,household file: district
+ur,household file: urban/rural
+s5aq1,household file: type of habitat
+s5aq2,household file: type of dwelling
+s5aq7,household file: owner of dwelling
+s5cq1,household file: main water source
+s5cq14,household file: electricity connection (grid / solar / both / no)
+s5cq16,household file: main lighting source
+s5cq21,household file: primary cook stove
+s5cq22a,household file: primary cooking fuel
+s5cq25,household file: toilet type
+s5dq1,household file: wall material
+s5dq2,household file: roof material
+s5dq3,household file: floor material
+s5cq20a,household file: internet connection
+s5cq26,household file: toilet shared
+s5eq1,household file: hit by a shock (12m)
+s7aq4,household file: owns livestock
+s7a2q1,household file: ever received Girinka cow
+s5aq3,household file: sleeping rooms
+s5cq2b,household file: minutes to fetch water
+s7aq4a,household file: cattle
+s7aq4b,household file: goats
+s7aq4c,household file: sheep
+s7aq4d,household file: pigs
+s7aq4e,household file: poultry
+hh_size,person file (aggregated)
+share_children,person file (aggregated)
+share_elderly,person file (aggregated)
+share_female,person file (aggregated)
+n_disabled,person file (aggregated)
+dependency_ratio,person file (aggregated)
+max_edu,person file (aggregated)
+share_adults_literate,person file (aggregated)
+share_insured,person file (aggregated)
+share_cbhi,person file (aggregated)
+n_phones,person file (aggregated)
+any_smartphone,person file (aggregated)
+any_internet_user,person file (aggregated)
+any_momo_user,person file (aggregated)
+n_wage_workers,person file (aggregated)
+any_nonfarm_biz,person file (aggregated)
+head_age,person file (aggregated)
+head_female,person file (aggregated)
+head_edu,person file (aggregated)
+head_disabled,person file (aggregated)
+head_marital,person file (aggregated)
+head_never_school,person file (aggregated)
+dur_living_room_suite__table_chair,"durables file (count owned, s10bq2)"
+dur_dining_table__table_chairs,"durables file (count owned, s10bq2)"
+dur_beds,"durables file (count owned, s10bq2)"
+dur_matresses,"durables file (count owned, s10bq2)"
+dur_table,"durables file (count owned, s10bq2)"
+dur_chairs,"durables file (count owned, s10bq2)"
+dur_bench,"durables file (count owned, s10bq2)"
+dur_car_for_home_use,"durables file (count owned, s10bq2)"
+dur_motorcycle_for_personal_use,"durables file (count owned, s10bq2)"
+dur_bicycle_tricycles_for_personal,"durables file (count owned, s10bq2)"
+dur_solar_lamps,"durables file (count owned, s10bq2)"
+dur_refrigerator_freezers,"durables file (count owned, s10bq2)"
+dur_electric_gas_cooker,"durables file (count owned, s10bq2)"
+dur_washing_machine__dryer,"durables file (count owned, s10bq2)"
+dur_electrical_iron,"durables file (count owned, s10bq2)"
+dur_microwave,"durables file (count owned, s10bq2)"
+dur_blender__mixer,"durables file (count owned, s10bq2)"
+dur_water_dispenser,"durables file (count owned, s10bq2)"
+dur_mobile_handsets__basic,"durables file (count owned, s10bq2)"
+dur_mobile_handsets__smart_phone,"durables file (count owned, s10bq2)"
+dur_computer__desktop_laptop,"durables file (count owned, s10bq2)"
+dur_tablet,"durables file (count owned, s10bq2)"
+dur_television_sets,"durables file (count owned, s10bq2)"
+dur_radio_sets,"durables file (count owned, s10bq2)"
+dur_home_theater__cd_players_and_s,"durables file (count owned, s10bq2)"
+dur_cameras__still__digital__video,"durables file (count owned, s10bq2)"
+dur_garden_tractors__grass_cutting,"durables file (count owned, s10bq2)"
+dur_n_types,"durables file (count owned, s10bq2)"
+rooms_per_person,derived: sleeping rooms / household size
