@@ -17,14 +17,214 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
 GEO = ROOT / "assets" / "rwanda_districts.geojson"
 
-# Validated categorical pair (dataviz reference palette, light + dark pass) and blue ramp.
-CURRENT, MODEL = "#eb6834", "#2a78d6"
-BLUES = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
-MUTED = "#a8a7a2"
+# Rwanda-inspired, colour-blind-safe palette. Green is the interface accent;
+# amber is reserved for the observed/current comparison series.
+CURRENT, MODEL = "#C46A32", "#147D64"
+GREENS = ["#E4F2ED", "#C2E2D7", "#94CDBA", "#62B49C", "#37987F", "#147D64", "#0B5B49"]
+MUTED = "#8A918E"
 RULES = {"current": "Current VUP", "model_same_quota": "Model, same district quotas",
          "model_poor_quota": "Model, poverty-based quotas", "model_national": "Model, national ranking"}
 
 st.set_page_config(page_title="VUP Targeting Gaps", page_icon="📍", layout="wide")
+
+st.markdown("""
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap');
+
+  :root {
+    --ink: #121b19; --body: #3d4b46; --muted: #6a7672; --line: #e2eae6;
+    --surface: #f4f8f6; --card: #ffffff; --canvas: #eef2f0;
+    --accent: #147d64; --accent-dark: #0b5b49; --accent-soft: #e4f1ec;
+    --radius: 16px; --sidebar-w: 268px;
+  }
+
+  html, body, .stApp, [class*="css"] { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; }
+  .stApp { background: var(--canvas); color: var(--ink); }
+
+  /* Every bit of Streamlit chrome text, stated explicitly so nothing inherits a
+     light-on-light colour from the base theme. */
+  .stApp, .stApp p, .stApp li, .stApp span, .stApp label, .stApp div,
+  .stMarkdown, [data-testid="stMarkdownContainer"] { color: var(--body); }
+  .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp strong, .stApp b { color: var(--ink); }
+  .stApp a { color: var(--accent-dark); }
+  [data-testid="stWidgetLabel"] p, .stRadio label p, .stSelectbox label p,
+  [data-testid="stExpander"] summary p, [data-testid="stExpander"] summary {
+    color: var(--ink) !important; font-weight: 600;
+  }
+  [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p {
+    color: var(--muted) !important;
+  }
+  div[data-baseweb="select"] > div { background: var(--card); color: var(--ink); border-color: var(--line); }
+  div[data-baseweb="select"] div, div[data-baseweb="popover"] li { color: var(--ink); }
+  [data-testid="stDataFrame"] { background: var(--card); }
+  #MainMenu, footer, [data-testid="stDecoration"] { visibility: hidden; }
+  header[data-testid="stHeader"] { background: transparent; height: 0; }
+
+  h1, h2, h3 { font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.03em; }
+  p, li { line-height: 1.65; }
+
+  /* ---------------- floating sidebar ---------------- */
+  section[data-testid="stSidebar"] {
+    position: fixed; top: 1.1rem; left: 1.1rem;
+    width: var(--sidebar-w) !important; min-width: var(--sidebar-w) !important;
+    height: calc(100vh - 2.2rem);
+    border: 1px solid var(--line); border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f6faf8 100%);
+    box-shadow: 0 24px 60px rgba(18, 48, 39, .13);
+    overflow: hidden auto; z-index: 100;
+  }
+  section[data-testid="stSidebar"] > div { padding: 1.5rem 1.15rem; height: auto; }
+  section[data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] { display: none; }
+  /* Streamlit reserves ~5rem of empty header space at the top of the sidebar */
+  section[data-testid="stSidebar"] [data-testid="stSidebarHeader"] { display: none; }
+  section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] { padding-top: 0; }
+  section[data-testid="stSidebar"] hr { border-color: var(--line); }
+
+  /* main pane sits beside the floating card */
+  section[data-testid="stMain"] {
+    margin: 1.1rem 1.1rem 1.1rem calc(var(--sidebar-w) + 2.2rem);
+    border: 1px solid var(--line); border-radius: 22px;
+    background: #fbfcfb; box-shadow: 0 20px 55px rgba(36, 58, 51, .08);
+  }
+  .block-container { max-width: 1240px; padding: 1.6rem 2.2rem 4rem; }
+
+  .side-brand { display: flex; align-items: center; gap: .7rem; margin-bottom: 1.5rem; }
+  .side-brand__mark {
+    display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent) 0%, #1aa37f 100%);
+    color: #fff; font-size: .8rem; font-weight: 700; letter-spacing: -.02em;
+    box-shadow: 0 6px 16px rgba(20, 125, 100, .3);
+  }
+  .side-brand__mark { color: #fff !important; }
+  .side-brand__name { color: var(--ink); font-size: 1rem; font-weight: 700; line-height: 1.15; font-family: 'Sora', sans-serif; }
+  .side-brand__name small { display: block; margin-top: .22rem; color: var(--muted); font-size: .67rem; font-weight: 500; font-family: 'Inter', sans-serif; }
+  .side-label {
+    margin: 1.25rem 0 .55rem; color: var(--muted); font-size: .66rem;
+    font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .side-item {
+    display: flex; align-items: center; gap: .5rem;
+    padding: .5rem .7rem; margin: .2rem 0; border-radius: 9px;
+    color: var(--body); font-size: .79rem; font-weight: 500;
+  }
+  .side-item:before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .55; flex: none; }
+
+  section[data-testid="stSidebar"] div[role="radiogroup"] {
+    display: flex; flex-direction: column; gap: .18rem; padding: 0; background: transparent;
+  }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label {
+    width: 100%; padding: .6rem .72rem; margin: 0; border-radius: 10px;
+    font-size: .84rem; cursor: pointer; transition: background .15s ease, color .15s ease;
+  }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label p { color: var(--body) !important; font-size: .84rem; font-weight: 550; }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label:hover { background: #edf4f1; }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) {
+    background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent);
+  }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) p {
+    color: var(--accent-dark) !important; font-weight: 700;
+  }
+  section[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child { display: none; }
+
+  .scope-card {
+    padding: .9rem 1rem; margin-top: 1.4rem; border: 1px solid var(--line);
+    border-radius: 14px; background: var(--card);
+  }
+  .scope-card strong { display: block; color: var(--ink); font-size: .8rem; }
+  .scope-card span { display: block; margin-top: .35rem; color: var(--muted); font-size: .71rem; line-height: 1.5; }
+
+  /* ---------------- masthead ---------------- */
+  .masthead {
+    display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 2.2rem;
+    align-items: end; padding: .4rem .1rem 1.3rem; margin-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead__kicker {
+    display: inline-block; margin: 0 0 .85rem; padding: .3rem .7rem;
+    border-radius: 999px; background: var(--accent-soft);
+    color: var(--accent-dark) !important; font-size: .7rem;
+    font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .masthead h1 {
+    max-width: 740px; margin: 0; font-size: clamp(2rem, 3.8vw, 3.1rem);
+    font-weight: 700; line-height: 1.04;
+  }
+  .masthead__sub { max-width: 700px; margin: .8rem 0 0; color: var(--body) !important; font-size: .97rem; }
+  .masthead__meta { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin: 0; }
+  .masthead__meta span {
+    padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 11px;
+    background: var(--surface); color: var(--muted) !important; font-size: .7rem;
+    font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+  }
+  .masthead__meta b { display: block; margin-top: .2rem; color: var(--ink); font-size: .88rem; letter-spacing: 0; text-transform: none; }
+
+  /* ---------------- components ---------------- */
+  div[data-baseweb="tab-list"] { gap: .2rem; padding: .3rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+  button[data-baseweb="tab"] { min-height: 42px; padding: .55rem 1rem; border-radius: 9px; font-weight: 600; }
+  button[data-baseweb="tab"][aria-selected="true"] { background: #fff; color: var(--accent-dark); }
+  div[data-baseweb="tab-highlight"] { display: none; }
+
+  div[data-testid="stMetric"] {
+    min-height: 146px; padding: 1.05rem 1.1rem; border: 1px solid var(--line);
+    border-radius: var(--radius); background: var(--card);
+    box-shadow: 0 8px 24px rgba(42, 68, 59, .05);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  div[data-testid="stMetric"]:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(42, 68, 59, .1); }
+  /* Streamlit truncates widget/metric labels with .stMarkdownEllipsis; let them wrap
+     so no label is ever hidden behind an ellipsis. */
+  .stMarkdownEllipsis, .stMarkdownEllipsis p,
+  div[data-testid="stMetricLabel"], div[data-testid="stMetricLabel"] > div {
+    white-space: normal !important; overflow: visible !important; text-overflow: clip !important;
+  }
+  div[data-testid="stMetricLabel"] p { color: var(--muted) !important; font-size: .78rem; font-weight: 600; line-height: 1.35; }
+  div[data-testid="stMetricValue"] { color: var(--ink) !important; font-family: 'Sora', sans-serif; font-size: clamp(1.7rem, 2.7vw, 2.3rem); font-weight: 700; }
+  div[data-testid="stMetricDelta"], div[data-testid="stMetricDelta"] div { font-weight: 600; font-size: .78rem; }
+
+  .section-intro { max-width: 790px; margin: 1.2rem 0 1.1rem; }
+  .section-intro h2 { margin: 0 0 .4rem; font-size: 1.6rem; }
+  .section-intro p { margin: 0; color: var(--muted) !important; }
+
+  .finding {
+    padding: 1.15rem 1.3rem; margin: .9rem 0;
+    border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface);
+    color: var(--body);
+  }
+  .finding strong { color: var(--accent-dark); }
+
+  div[data-testid="stAlert"] { border-radius: var(--radius); border: 1px solid #cfe0da; background: var(--accent-soft); }
+  div[data-testid="stAlert"] p { color: #11493b !important; }
+
+  /* caveat note, in the project palette rather than Streamlit's blue info box */
+  .note {
+    display: flex; align-items: flex-start; gap: .8rem;
+    padding: .85rem 1.1rem; margin: 1.1rem 0;
+    border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+  }
+  .note__tag {
+    flex: none; margin-top: .1rem; padding: .18rem .5rem; border-radius: 6px;
+    background: var(--accent-soft); color: var(--accent-dark) !important;
+    font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .note p { margin: 0; color: var(--muted) !important; font-size: .86rem; }
+  div[data-testid="stExpander"] { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+  div[data-testid="stDataFrame"], div[data-testid="stPlotlyChart"] { border-radius: var(--radius); }
+  div[role="radiogroup"] { border-radius: 10px; }
+
+  @media (max-width: 1100px) {
+    section[data-testid="stSidebar"] { position: relative; top: 0; left: 0; height: auto; width: 100% !important; min-width: 0 !important; border-radius: 0; }
+    section[data-testid="stMain"] { margin: 0; border-radius: 0; border: 0; }
+    .block-container { padding: 1rem 1.1rem 2.5rem; }
+    .masthead { grid-template-columns: 1fr; padding: 1rem 0; }
+    .masthead h1 { font-size: 2.2rem; }
+    button[data-baseweb="tab"] { padding: .45rem .6rem; font-size: .78rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+  }
+</style>
+""", unsafe_allow_html=True)
 
 
 def rewind(geo):
@@ -55,50 +255,114 @@ anyv = cn.iloc[0]
 cur = tn[(tn.budget == "survey") & (tn.rule == "current")].iloc[0]
 best = tn[(tn.budget == "survey") & (tn.rule == "model_poor_quota")].iloc[0]
 
+with st.sidebar:
+    st.markdown("""
+    <div class="side-brand">
+      <div class="side-brand__mark">RW</div>
+      <div class="side-brand__name">VUP Lens<small>Targeting evidence platform</small></div>
+    </div>
+    <div class="side-label">Explore</div>
+    """, unsafe_allow_html=True)
+    page = st.radio(
+        "Dashboard section",
+        ["Overview", "District map", "By programme", "Better targeting", "Method & limits"],
+        label_visibility="collapsed",
+    )
+    st.markdown("""
+    <div class="side-label">Evidence standard</div>
+    <div class="side-item">Survey-weighted estimates</div>
+    <div class="side-item">Cluster-robust intervals</div>
+    <div class="side-item">No household rows shown</div>
+    <div class="scope-card">
+      <strong>EICV7 2023/24</strong>
+      <span>15,054 households across all 30 districts. Results are aggregated for safe public use.</span>
+    </div>
+    """, unsafe_allow_html=True)
+    st.caption("NISR Big Data Hackathon 2026 | Track 2")
+
 
 def fmt_k(v):
     return f"{v / 1000:,.0f}k"
 
 
-st.title("Who does VUP miss?")
-st.caption("Social protection coverage of poor households in Rwanda · EICV7 2023/24 (NISR) · "
-           "NISR Big Data Hackathon 2026, Track 2")
+def polish(fig):
+    """Apply one visual language to every chart without changing its data."""
+    fig.update_layout(
+        font=dict(family="Segoe UI, Arial, sans-serif", color="#34413D", size=13),
+        title_font=dict(size=17, color="#17211F"),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        hoverlabel=dict(bgcolor="#17211F", font_color="#F7FAF8", bordercolor="#17211F"),
+        legend=dict(font=dict(size=12)),
+    )
+    # automargin: category labels on horizontal bar charts were clipped by the zero left margin
+    fig.update_xaxes(gridcolor="#E5ECE9", zeroline=False, title_font=dict(size=12),
+                     tickfont=dict(size=12, color="#3D4B46"), automargin=True)
+    fig.update_yaxes(gridcolor="#E5ECE9", zeroline=False, title_font=dict(size=12),
+                     tickfont=dict(size=12, color="#3D4B46"), automargin=True)
+    return fig
 
-tab_over, tab_map, tab_comp, tab_target, tab_method = st.tabs(
-    ["Overview", "District map", "By programme", "Better targeting", "Method & limits"])
+
+st.markdown("""
+<section class="masthead">
+  <div>
+    <p class="masthead__kicker">Rwanda social protection intelligence</p>
+    <h1>Who does VUP miss?</h1>
+    <p class="masthead__sub">See where coverage falls short and how the same budget could reach more poor households.</p>
+  </div>
+  <div class="masthead__meta">
+    <span>Source<br><b>EICV7 2023/24</b></span>
+    <span>Coverage<br><b>30 districts</b></span>
+    <span>Sample<br><b>15,054 households</b></span>
+    <span>Privacy<br><b>Aggregates only</b></span>
+  </div>
+</section>
+""", unsafe_allow_html=True)
 
 # ---------------------------------------------------------------- Overview
-with tab_over:
+if page == "Overview":
+    st.markdown("""
+    <div class="section-intro">
+      <h2>The targeting gap, at a glance</h2>
+      <p>Coverage is low among poor households, while most reported recipients are not poor. The figures below use survey weights and design-aware uncertainty.</p>
+    </div>
+    """, unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Poor households reached by VUP", f"{anyv.poor_coverage:.0f}%",
-              help=f"95% CI {anyv.poor_coverage_lo:.1f}–{anyv.poor_coverage_hi:.1f}%. Survey-reported.")
-    c2.metric("Exclusion error (range)", "68–84%",
-              help="84% as reported; 68–79% after correcting for the survey undercount of beneficiaries "
+              help=f"95% CI {anyv.poor_coverage_lo:.1f}-{anyv.poor_coverage_hi:.1f}%. Survey-reported.")
+    c2.metric("Exclusion error (range)", "68-84%",
+              help="84% as reported; 68-79% after correcting for the survey undercount of beneficiaries "
                    "versus MINALOC administrative counts.")
     c3.metric("VUP recipients who are not poor", f"{anyv.inclusion_error:.0f}%",
-              help=f"95% CI {anyv.inclusion_error_lo:.1f}–{anyv.inclusion_error_hi:.1f}%")
+              help=f"95% CI {anyv.inclusion_error_lo:.1f}-{anyv.inclusion_error_hi:.1f}%")
     c4.metric("Poor households reached, same budget", fmt_k(best.poor_reached),
               delta=f"+{fmt_k(best.poor_reached - cur.poor_reached)} vs today ({fmt_k(cur.poor_reached)})",
               help="Model-based targeting with district budgets proportional to poverty, "
                    "same number of beneficiaries as today.")
-    st.markdown(
-        f"""
-**What we found.** About **{anyv.recipients / 1e3:,.0f}k households** report a VUP component, but only
-**{anyv.poor_coverage:.0f}%** of poor households are among them, and **{anyv.inclusion_error:.0f}%** of recipients are not poor.
-Extreme-poor households are barely better reached ({anyv.extreme_poor_coverage:.0f}%). District budgets follow poverty only
-loosely: Nyagatare has the most poor households left out, while low-poverty Gicumbi and Ruhango have some of the highest coverage.
-
-**What would help.** A proxy-means score built from information that is easy to verify (household size, assets, housing,
-education) ranks households far better than today's allocation. With the **same number of beneficiaries**, it would reach
-about **{best.poor_reached / cur.poor_reached:.1f}×** as many poor households and cut the share of non-poor recipients from
-{cur.inclusion_error:.0f}% to {best.inclusion_error:.0f}%.
-"""
-    )
-    st.info("Survey estimates. The survey records 67–76% of the beneficiaries in MINALOC's administrative list, "
-            "so exclusion errors are shown as a range. See *Method & limits*.", icon="ℹ️")
+    st.markdown(f"""
+    <div class="finding">
+      <strong>What the evidence says.</strong> About {anyv.recipients / 1e3:,.0f}k households report a VUP component, yet only {anyv.poor_coverage:.0f}% of poor households are reached. Nyagatare has the largest number of poor households left out.
+    </div>
+    <div class="finding">
+      <strong>What could improve.</strong> With the same number of beneficiaries, poverty-based district quotas and a transparent proxy score could reach about {best.poor_reached / cur.poor_reached:.1f} times as many poor households and reduce non-poor recipients from {cur.inclusion_error:.0f}% to {best.inclusion_error:.0f}%.
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div class="note">
+      <span class="note__tag">Note</span>
+      <p>Survey estimates. The survey records 67-76% of the beneficiaries in MINALOC's administrative
+      list, so exclusion errors are shown as a range. See <em>Method &amp; limits</em>.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------------- Map
-with tab_map:
+if page == "District map":
+    st.markdown("""
+    <div class="section-intro">
+      <h2>Uneven need, uneven reach</h2>
+      <p>Explore how poverty, coverage, and targeting errors vary across districts. Kigali estimates are muted because their coefficients of variation are too high for ranking.</p>
+    </div>
+    """, unsafe_allow_html=True)
     metrics = {
         "Poor households left uncovered": ("poor_uncovered", "{:,.0f}"),
         "Exclusion error (% of poor not reached)": ("exclusion_error", "{:.1f}%"),
@@ -115,7 +379,7 @@ with tab_map:
         fig = go.Figure()
         fig.add_trace(go.Choropleth(
             geojson=geo, featureidkey="properties.shapeName", locations=reliable.district, z=reliable[col],
-            colorscale=[[i / (len(BLUES) - 1), c] for i, c in enumerate(BLUES)],
+            colorscale=[[i / (len(GREENS) - 1), c] for i, c in enumerate(GREENS)],
             marker_line_color="white", marker_line_width=1.5,
             colorbar=dict(title=dict(text=""), thickness=12, len=0.7),
             customdata=pd.concat([reliable[col], reliable[["poverty_rate", "coverage", "exclusion_error"]]], axis=1).to_numpy(),
@@ -125,11 +389,11 @@ with tab_map:
         fig.add_trace(go.Choropleth(
             geojson=geo, featureidkey="properties.shapeName", locations=kig.district, z=[0] * len(kig),
             colorscale=[[0, MUTED], [1, MUTED]], showscale=False, marker_line_color="white", marker_line_width=1.5,
-            hovertemplate="<b>%{location}</b><br>Kigali: estimates too imprecise to map (CV 17–19%)<extra></extra>"))
+            hovertemplate="<b>%{location}</b><br>Kigali: estimates too imprecise to map (CV 17-19%)<extra></extra>"))
         fig.update_geos(fitbounds="locations", visible=False, projection_type="mercator")
         fig.update_layout(height=520, margin=dict(l=0, r=0, t=0, b=0), paper_bgcolor="rgba(0,0,0,0)",
                           geo_bgcolor="rgba(0,0,0,0)")
-        st.plotly_chart(fig, width="stretch", theme="streamlit")
+        st.plotly_chart(polish(fig), width="stretch", theme=None)
         st.caption("Grey: Kigali districts (Nyarugenge, Gasabo, Kicukiro), muted because survey estimates "
                    "there are too imprecise to compare.")
     with right:
@@ -141,7 +405,7 @@ with tab_map:
             hovertemplate="<b>%{text}</b><br>Poverty %{x:.1f}%<br>Coverage %{y:.1f}%<extra></extra>"))
         sc.update_layout(height=480, margin=dict(l=0, r=10, t=10, b=0), showlegend=False,
                          xaxis_title="Poverty rate (% of people)", yaxis_title="VUP coverage (% of households)")
-        st.plotly_chart(sc, width="stretch", theme="streamlit")
+        st.plotly_chart(polish(sc), width="stretch", theme=None)
     show = cd[["district", "province", "poverty_rate", "coverage", "exclusion_error", "exclusion_error_lo",
                "exclusion_error_hi", "inclusion_error", "poor_uncovered", "rank_poor_uncovered", "kigali_flag"]]
     with st.expander("District table (with 95% confidence intervals)"):
@@ -150,7 +414,13 @@ with tab_map:
                      hide_index=True, width="stretch")
 
 # ---------------------------------------------------------------- Components
-with tab_comp:
+if page == "By programme":
+    st.markdown("""
+    <div class="section-intro">
+      <h2>Not every programme targets poverty equally</h2>
+      <p>Compare reach among poor households with the share of recipients who are not poor. Confidence intervals show the uncertainty around each estimate.</p>
+    </div>
+    """, unsafe_allow_html=True)
     comp = cn.iloc[1:]
     st.markdown("**Share of poor households reached, and share of recipients who are not poor, by VUP component**")
     a, b = st.columns(2)
@@ -164,12 +434,18 @@ with tab_comp:
             hovertemplate="%{y}: %{x:.1f}%<extra></extra>"))
         bar.update_layout(title=title, height=330, margin=dict(l=0, r=30, t=40, b=0),
                           yaxis=dict(autorange="reversed"), xaxis=dict(range=[0, max(comp[hi]) * 1.15]))
-        box.plotly_chart(bar, width="stretch", theme="streamlit")
+        box.plotly_chart(polish(bar), width="stretch", theme=None)
     st.caption("Classic Public Works is the most pro-poor component; Financial Services (approved VUP loans) "
                "reaches mostly non-poor households. Error bars: 95% CI.")
 
 # ---------------------------------------------------------------- Targeting
-with tab_target:
+if page == "Better targeting":
+    st.markdown("""
+    <div class="section-intro">
+      <h2>Use the same budget more effectively</h2>
+      <p>Compare current selection with three model-assisted allocation rules. Lower exclusion error means more poor households are reached.</p>
+    </div>
+    """, unsafe_allow_html=True)
     budget = st.radio("Budget", ["survey", "admin"], horizontal=True,
                       format_func=lambda b: "Today's beneficiaries as surveyed (~380k households)" if b == "survey"
                       else "Scaled to MINALOC administrative count (~500k households)")
@@ -186,10 +462,10 @@ with tab_target:
                       "<br>Non-poor recipients %{customdata[1]:.1f}%<br>Extreme poor reached %{customdata[2]:.1f}%<extra></extra>"))
     bar.update_layout(title="Exclusion error: share of poor households not reached (lower is better)", height=300,
                       margin=dict(l=0, r=40, t=40, b=0), yaxis=dict(autorange="reversed"), xaxis=dict(range=[0, 100]))
-    st.plotly_chart(bar, width="stretch", theme="streamlit")
+    st.plotly_chart(polish(bar), width="stretch", theme=None)
     if budget == "admin":
         st.caption("Current VUP at administrative scale is not directly observed; after correcting for the survey "
-                   "undercount its exclusion error is 68–79%.")
+                   "undercount its exclusion error is 68-79%.")
     st.dataframe(t[["label", "selected_hh", "poor_reached", "exclusion_error", "inclusion_error",
                     "extreme_poor_reached_pct"]].astype({"selected_hh": int, "poor_reached": int}).rename(columns={
                         "label": "rule", "selected_hh": "households selected", "poor_reached": "poor reached",
@@ -207,12 +483,18 @@ with tab_target:
                          marker_color=MODEL, hovertemplate="%{y}: %{x:,.0f} poor reached with model<extra></extra>"))
     fig.update_layout(barmode="group", bargap=0.25, bargroupgap=0.1, height=760, margin=dict(l=0, r=0, t=10, b=0),
                       legend=dict(orientation="h", y=1.02, x=0), xaxis_title="Poor households reached")
-    st.plotly_chart(fig, width="stretch", theme="streamlit")
+    st.plotly_chart(polish(fig), width="stretch", theme=None)
     st.caption("Same district quotas: better ranking only, no money moves between districts. "
                "Poverty-based quotas: district budgets proportional to their poor households. Kigali omitted.")
 
 # ---------------------------------------------------------------- Method
-with tab_method:
+if page == "Method & limits":
+    st.markdown("""
+    <div class="section-intro">
+      <h2>How to read these results</h2>
+      <p>The dashboard separates measured evidence, modeled scenarios, and known limitations. Household microdata never appear in the app.</p>
+    </div>
+    """, unsafe_allow_html=True)
     mm = data["model_metrics"]
     logit = mm[(mm.variant == "no_program") & (mm.model == "logit")].iloc[0]
     st.markdown(f"""
@@ -233,7 +515,7 @@ identified in the data (0.8% of MINALOC's beneficiary list).
                                      "admin": "MINALOC count", "survey_over_admin": "survey / admin"}).round(2),
                  hide_index=True, width="stretch")
     st.markdown(f"""
-The survey captures 67–76% of administrative beneficiaries for the four main components. We therefore report the exclusion
+The survey captures 67-76% of administrative beneficiaries for the four main components. We therefore report the exclusion
 error as a range: 84% as reported, 79% if the missing beneficiaries resemble the reported ones, 68% if they were all poor.
 
 ### Targeting model

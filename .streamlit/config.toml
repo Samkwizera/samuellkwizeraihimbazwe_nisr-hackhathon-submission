@@ -1,0 +1,13 @@
+# Pin the theme so text contrast is identical for every visitor. Without this
+# Streamlit follows the browser's dark preference and inherits light-on-light text.
+[theme]
+base = "light"
+primaryColor = "#147D64"
+backgroundColor = "#FBFCFB"
+secondaryBackgroundColor = "#F2F6F4"
+textColor = "#17211F"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
