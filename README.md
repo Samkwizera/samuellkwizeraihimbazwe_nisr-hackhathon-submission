@@ -73,6 +73,36 @@ The targeting simulation ranks these out-of-fold scores under three rules:
 
 In implementation, poverty-proportional quotas should use NISR's published district poverty rates rather than survey-derived household counts.
 
+## Alignment with NST2 and Vision 2050
+
+The solution directly supports **NST2 Goal 26: reduced poverty and improved standards of living**. NST2 calls for wider and more adequate transfers for poor and vulnerable people, targeting through the social registry, and stronger coordination and monitoring among MINALOC, LODA, districts, civil society, and development partners. The Social Protection Sector Strategic Plan 2024-2029 also identifies coverage, targeting effectiveness, adaptability, and impact tracking as persistent challenges.
+
+VUP Lens turns those priorities into measurable decisions:
+
+| National priority | What this project contributes |
+|---|---|
+| Increase social-transfer coverage | Measures the share and estimated number of poor households currently missed. |
+| Improve targeting effectiveness | Tests transparent, leakage-free household prioritisation at a fixed budget. |
+| Allocate resources toward need | Compares current district budgets with poverty-informed quotas. |
+| Strengthen monitoring | Provides reproducible national and district indicators with uncertainty. |
+| Protect dignity and rights | Keeps community verification, explanations, and appeals in the final decision process. |
+
+This also advances Vision 2050's direction toward inclusive development and a high standard of living for all Rwandans.
+
+## From analysis to government use
+
+The proposed operating model is deliberately simple:
+
+1. **Measure:** NISR updates poverty evidence and validates model performance.
+2. **Allocate:** MINALOC and LODA determine programme rules and poverty-informed district quotas.
+3. **Prioritise:** districts use observable household conditions to produce preliminary shortlists.
+4. **Verify:** community review checks circumstances that administrative and survey data cannot observe.
+5. **Learn:** appeals and monitoring reveal errors and improve the next allocation cycle.
+
+A 90-day pilot could test the approach in two high-gap districts and two comparison districts. Success should be judged by poor-household reach, exclusion and inclusion errors, processing time, appeal rates, subgroup outcomes, and participant understanding. The pilot should publish its rules before selection and prohibit automatic eligibility decisions.
+
+The dashboard includes a downloadable two-page policy brief generated reproducibly by `src/generate_policy_brief.py`.
+
 ## Limitations and responsible use
 
 - Programme participation and poverty are survey-reported and may contain recall or classification error.
@@ -130,6 +160,10 @@ The public repository contains original code, aggregate outputs, and documentati
 
 ## Citation
 
-National Institute of Statistics of Rwanda (NISR). (2025). *Seventh Integrated Household Living Conditions Survey (EICV7) Report* and *Methodological Note*.
+[National Institute of Statistics of Rwanda (NISR)](https://www.statistics.gov.rw/). (2025). *Seventh Integrated Household Living Conditions Survey (EICV7) Report* and *Methodological Note*.
+
+Republic of Rwanda. [National Strategy for Transformation 2024-2029](https://www.minecofin.gov.rw/index.php?eID=dumpFile&f=112651&t=f&token=0d37e3b2e0b33ca65ec4fcc88d0c86132b3e6056).
+
+Ministry of Local Government. [Social Protection Sector Strategic Plan 2024-2029](https://www.minaloc.gov.rw/fileadmin/user_upload/Minaloc/Publications/Useful_Documents/Social_Protection/Social_Protection_Sector_Strategic_Plan_2024_-_29_Full_version_.pdf).
 
 District boundaries: geoBoundaries Rwanda ADM2, sourced from NISR Open Data, CC BY 4.0 (Runfola et al., 2020).

@@ -16,6 +16,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
 GEO = ROOT / "assets" / "rwanda_districts.geojson"
+POLICY_BRIEF = ROOT / "output" / "pdf" / "vup_policy_brief.pdf"
 
 # Rwanda-inspired, colour-blind-safe palette. Green is the interface accent;
 # amber is reserved for the observed/current comparison series.
@@ -193,6 +194,37 @@ st.markdown("""
   }
   .finding strong { color: var(--accent-dark); }
 
+  .plain-hero {
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+    gap: 1rem; margin: 1rem 0 1.4rem;
+  }
+  .plain-hero__message, .plain-hero__result {
+    padding: 1.35rem 1.45rem; border-radius: var(--radius); border: 1px solid var(--line);
+  }
+  .plain-hero__message { background: #fff; }
+  .plain-hero__result { background: var(--accent-soft); border-color: #b9d8cd; }
+  .plain-hero__number {
+    display: block; margin-bottom: .35rem; color: var(--accent-dark) !important;
+    font-family: 'Sora', sans-serif; font-size: clamp(2.3rem, 5vw, 4.2rem); font-weight: 700; line-height: 1;
+  }
+  .plain-hero h2, .plain-hero h3 { margin: 0 0 .5rem; }
+  .plain-hero p { margin: 0; }
+  .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin: 1rem 0 1.5rem; }
+  .story-step { padding: 1.1rem; border-top: 3px solid var(--accent); background: #fff; }
+  .story-step strong { display: block; margin-bottom: .35rem; font-size: 1rem; }
+  .story-step p { margin: 0; color: var(--muted) !important; font-size: .88rem; }
+  .people-row { display: flex; flex-wrap: wrap; gap: 5px; margin: .9rem 0 .55rem; max-width: 530px; }
+  .person { width: 17px; height: 17px; border-radius: 50%; background: #d6dfdb; }
+  .person.reached { background: var(--accent); }
+  .person.more { background: #71b9a4; }
+  .simple-key { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--muted); font-size: .78rem; }
+  .simple-key span:before { content: ''; display: inline-block; width: 9px; height: 9px; margin-right: .35rem; border-radius: 50%; background: #d6dfdb; }
+  .simple-key .key-current:before { background: var(--accent); }
+  .simple-key .key-more:before { background: #71b9a4; }
+  .action-box { padding: 1.25rem 1.4rem; margin: 1rem 0; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); }
+  .action-box h3 { margin-top: 0; }
+  .action-box ol { margin-bottom: 0; }
+
   div[data-testid="stAlert"] { border-radius: var(--radius); border: 1px solid #cfe0da; background: var(--accent-soft); }
   div[data-testid="stAlert"] p { color: #11493b !important; }
 
@@ -219,6 +251,7 @@ st.markdown("""
     .masthead { grid-template-columns: 1fr; padding: 1rem 0; }
     .masthead h1 { font-size: 2.2rem; }
     button[data-baseweb="tab"] { padding: .45rem .6rem; font-size: .78rem; }
+    .plain-hero, .story-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
@@ -265,7 +298,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     page = st.radio(
         "Dashboard section",
-        ["Overview", "District map", "By programme", "Better targeting", "Method & limits"],
+        ["Start here", "Where help is needed", "How programmes compare", "A better way to target", "Evidence & limits"],
         label_visibility="collapsed",
     )
     st.markdown("""
@@ -306,9 +339,9 @@ def polish(fig):
 st.markdown("""
 <section class="masthead">
   <div>
-    <p class="masthead__kicker">Rwanda social protection intelligence</p>
-    <h1>Who does VUP miss?</h1>
-    <p class="masthead__sub">See where coverage falls short and how the same budget could reach more poor households.</p>
+    <p class="masthead__kicker">A clearer path to social protection</p>
+    <h1>Help VUP reach more poor families</h1>
+    <p class="masthead__sub">See who is being missed, where the gap is largest, and how the same budget can reach more families.</p>
   </div>
   <div class="masthead__meta">
     <span>Source<br><b>EICV7 2023/24</b></span>
@@ -319,48 +352,79 @@ st.markdown("""
 </section>
 """, unsafe_allow_html=True)
 
-# ---------------------------------------------------------------- Overview
-if page == "Overview":
+# ---------------------------------------------------------------- Start here
+if page == "Start here":
     st.markdown("""
     <div class="section-intro">
-      <h2>The targeting gap, at a glance</h2>
-      <p>Coverage is low among poor households, while most reported recipients are not poor. The figures below use survey weights and design-aware uncertainty.</p>
+      <h2>The problem in one minute</h2>
+      <p>VUP is designed to protect vulnerable Rwandan families. Survey evidence shows that many poor families are still outside the five programme components we can observe.</p>
     </div>
     """, unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Poor households reached by VUP", f"{anyv.poor_coverage:.0f}%",
-              help=f"95% CI {anyv.poor_coverage_lo:.1f}-{anyv.poor_coverage_hi:.1f}%. Survey-reported.")
-    c2.metric("Exclusion error (range)", "68-84%",
-              help="84% as reported; 68-79% after correcting for the survey undercount of beneficiaries "
-                   "versus MINALOC administrative counts.")
-    c3.metric("VUP recipients who are not poor", f"{anyv.inclusion_error:.0f}%",
-              help=f"95% CI {anyv.inclusion_error_lo:.1f}-{anyv.inclusion_error_hi:.1f}%")
-    c4.metric("Poor households reached, same budget", fmt_k(best.poor_reached),
-              delta=f"+{fmt_k(best.poor_reached - cur.poor_reached)} vs today ({fmt_k(cur.poor_reached)})",
-              help="Model-based targeting with district budgets proportional to poverty, "
-                   "same number of beneficiaries as today.")
     st.markdown(f"""
-    <div class="finding">
-      <strong>What the evidence says.</strong> About {anyv.recipients / 1e3:,.0f}k households report a VUP component, yet only {anyv.poor_coverage:.0f}% of poor households are reached. Nyagatare has the largest number of poor households left out.
+    <div class="plain-hero">
+      <div class="plain-hero__message">
+        <span class="plain-hero__number">84 in 100</span>
+        <h2>poor households report no observed VUP support</h2>
+        <p>Even after allowing for beneficiaries missing from the survey, the estimate is still about 68 to 79 in every 100 poor households.</p>
+      </div>
+      <div class="plain-hero__result">
+        <span class="plain-hero__number">+138k</span>
+        <h3>more poor households reached</h3>
+        <p>A poverty-based district budget and household priority score could reach about {best.poor_reached / 1000:,.0f}k poor households, compared with {cur.poor_reached / 1000:,.0f}k now, without increasing the number selected.</p>
+      </div>
     </div>
-    <div class="finding">
-      <strong>What could improve.</strong> With the same number of beneficiaries, poverty-based district quotas and a transparent proxy score could reach about {best.poor_reached / cur.poor_reached:.1f} times as many poor households and reduce non-poor recipients from {cur.inclusion_error:.0f}% to {best.inclusion_error:.0f}%.
+    <div class="story-grid">
+      <div class="story-step"><strong>1. Find the gap</strong><p>Measure how many poor households are missed in every district.</p></div>
+      <div class="story-step"><strong>2. Put resources where need is greater</strong><p>Use published poverty rates to set fair district budgets.</p></div>
+      <div class="story-step"><strong>3. Verify families locally</strong><p>Use a simple priority score as a shortlist, then confirm through community review and appeals.</p></div>
     </div>
     """, unsafe_allow_html=True)
+
+    dots = '<span class="person reached"></span>' * 16 + '<span class="person more"></span>' * 19 + '<span class="person"></span>' * 65
+    st.markdown(f"""
+    <div class="action-box">
+      <h3>Out of 100 poor households</h3>
+      <div class="people-row">{dots}</div>
+      <div class="simple-key">
+        <span class="key-current">16 reached now</span>
+        <span class="key-more">19 more reached with national model ranking</span>
+        <span>65 still need other or expanded support</span>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="action-box">
+      <h3>The recommendation</h3>
+      <ol>
+        <li>Use NISR's published district poverty rates when distributing the available VUP places.</li>
+        <li>Within each district, use observable household conditions to create a transparent shortlist.</li>
+        <li>Keep people in control: community verification, a clear explanation, and an appeals process are required before enrolment decisions.</li>
+      </ol>
+    </div>
+    """, unsafe_allow_html=True)
+
+    if POLICY_BRIEF.exists():
+        st.download_button(
+            "Download the 2-page policy brief",
+            data=POLICY_BRIEF.read_bytes(),
+            file_name="VUP_targeting_policy_brief.pdf",
+            mime="application/pdf",
+            width="stretch",
+        )
     st.markdown("""
     <div class="note">
-      <span class="note__tag">Note</span>
-      <p>Survey estimates. The survey records 67-76% of the beneficiaries in MINALOC's administrative
-      list, so exclusion errors are shown as a range. See <em>Method &amp; limits</em>.</p>
+      <span class="note__tag">Why a range?</span>
+      <p>The survey records fewer beneficiaries than MINALOC's administrative list. We show both the survey result and corrected scenarios instead of pretending there is one exact number. Details are under <em>Evidence &amp; limits</em>.</p>
     </div>
     """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------------- Map
-if page == "District map":
+if page == "Where help is needed":
     st.markdown("""
     <div class="section-intro">
-      <h2>Uneven need, uneven reach</h2>
-      <p>Explore how poverty, coverage, and targeting errors vary across districts. Kigali estimates are muted because their coefficients of variation are too high for ranking.</p>
+      <h2>Where are poor families most often missed?</h2>
+      <p>Darker districts have a larger gap for the selected measure. Kigali is grey because its survey estimates are not precise enough for fair comparison.</p>
     </div>
     """, unsafe_allow_html=True)
     metrics = {
@@ -414,11 +478,11 @@ if page == "District map":
                      hide_index=True, width="stretch")
 
 # ---------------------------------------------------------------- Components
-if page == "By programme":
+if page == "How programmes compare":
     st.markdown("""
     <div class="section-intro">
-      <h2>Not every programme targets poverty equally</h2>
-      <p>Compare reach among poor households with the share of recipients who are not poor. Confidence intervals show the uncertainty around each estimate.</p>
+      <h2>Which VUP components reach poor families?</h2>
+      <p>The left chart shows how many poor households each component reaches. The right chart shows how many recipients are above the poverty line. Thin lines show the reasonable range around each estimate.</p>
     </div>
     """, unsafe_allow_html=True)
     comp = cn.iloc[1:]
@@ -439,11 +503,11 @@ if page == "By programme":
                "reaches mostly non-poor households. Error bars: 95% CI.")
 
 # ---------------------------------------------------------------- Targeting
-if page == "Better targeting":
+if page == "A better way to target":
     st.markdown("""
     <div class="section-intro">
-      <h2>Use the same budget more effectively</h2>
-      <p>Compare current selection with three model-assisted allocation rules. Lower exclusion error means more poor households are reached.</p>
+      <h2>What happens if selection improves?</h2>
+      <p>Every option below selects approximately the same number of households. A shorter bar means fewer poor households are left without support.</p>
     </div>
     """, unsafe_allow_html=True)
     budget = st.radio("Budget", ["survey", "admin"], horizontal=True,
@@ -488,11 +552,11 @@ if page == "Better targeting":
                "Poverty-based quotas: district budgets proportional to their poor households. Kigali omitted.")
 
 # ---------------------------------------------------------------- Method
-if page == "Method & limits":
+if page == "Evidence & limits":
     st.markdown("""
     <div class="section-intro">
-      <h2>How to read these results</h2>
-      <p>The dashboard separates measured evidence, modeled scenarios, and known limitations. Household microdata never appear in the app.</p>
+      <h2>Why you can trust the evidence, and where to be careful</h2>
+      <p>This section explains the data, the model, and its limits. Household records never appear in the public app.</p>
     </div>
     """, unsafe_allow_html=True)
     mm = data["model_metrics"]
@@ -534,8 +598,31 @@ those selected being poor.
   verification (Ubudehe-style) and appeals.
 - The model uses survey-style information; deploying it requires collecting the same variables for applicants.
 
+### From evidence to implementation
+1. **NISR** publishes poverty evidence and supports model validation.
+2. **MINALOC and LODA** set the national budget and programme rules.
+3. **Districts** receive poverty-informed quotas and produce a preliminary shortlist.
+4. **Community verification** checks circumstances the model cannot observe.
+5. **Appeals and monitoring** correct errors and measure who is still being missed.
+
+### 90-day pilot
+- **Weeks 1-3:** agree variables, safeguards, roles, and published decision rules.
+- **Weeks 4-7:** test in four districts: two with large uncovered-poor estimates and two comparison districts.
+- **Weeks 8-10:** conduct community verification and an accessible appeals process.
+- **Weeks 11-13:** compare poor-household reach, exclusion, inclusion, processing time, and appeal outcomes with current practice.
+
+### Alignment with Rwanda's priorities
+- **NST2 Goal 26:** reduced poverty and improved standards of living.
+- **NST2 social protection priority:** increase the coverage and adequacy of transfers for poor and vulnerable people.
+- **NST2 delivery approach:** use the social registry for targeting and strengthen joint monitoring across MINALOC, LODA, districts, civil society, and partners.
+- **Vision 2050:** inclusive development and a high standard of living for all Rwandans.
+
+This tool supports those goals by showing coverage gaps, proposing poverty-informed resource allocation, and giving government a measurable way to test whether targeting improves.
+
 ### Sources
-National Institute of Statistics of Rwanda (2025). *EICV7 Report* and *Methodological Note*.
+[National Institute of Statistics of Rwanda](https://www.statistics.gov.rw/) (2025), *EICV7 Report* and *Methodological Note*.
+[National Strategy for Transformation 2024-2029](https://www.minecofin.gov.rw/index.php?eID=dumpFile&f=112651&t=f&token=0d37e3b2e0b33ca65ec4fcc88d0c86132b3e6056).
+[Social Protection Sector Strategic Plan 2024-2029](https://www.minaloc.gov.rw/fileadmin/user_upload/Minaloc/Publications/Useful_Documents/Social_Protection/Social_Protection_Sector_Strategic_Plan_2024_-_29_Full_version_.pdf).
 District boundaries: geoBoundaries (Runfola et al. 2020), source NISR Open Data, CC BY 4.0.
 AI use: see the project README.
 """)
