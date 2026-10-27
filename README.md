@@ -6,6 +6,8 @@ This project asks a practical question: **where does the Vision 2020 Umurenge Pr
 
 The analysis uses the NISR EICV7 2023/24 cross-sectional sample: 15,054 households across Rwanda's 30 districts, representing about 3.29 million households. No household microdata are included in this repository or exposed by the dashboard.
 
+**Live dashboard:** [samuellkwizeraihimbazwenisr-hackhathon-submission.streamlit.app](https://samuellkwizeraihimbazwenisr-hackhathon-submission.streamlit.app/)
+
 ## What we found
 
 - The five observable VUP components reach **15.9% of poor households** (95% CI: 14.7–17.1%) and **18.2% of extremely poor households**.
@@ -18,6 +20,8 @@ The analysis uses the NISR EICV7 2023/24 cross-sectional sample: 15,054 househol
 These are **policy simulations**, not automated eligibility decisions. They show the potential value of better screening and geographic allocation; final selection should include transparent rules, current administrative data, local verification, appeals, and ongoing fairness monitoring.
 
 ## Dashboard
+
+Open the [deployed Streamlit dashboard](https://samuellkwizeraihimbazwenisr-hackhathon-submission.streamlit.app/).
 
 The Streamlit app has five views:
 
